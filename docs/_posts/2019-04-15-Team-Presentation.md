@@ -66,6 +66,6 @@ Right from forming a team and gathering requirements till the final phase, prope
 
 ![Flexibility]({{site.baseurl}}/images/Flexibility.jpg "Flexibility"){:height="35%" width="35%"}
 
-The work is shared between two members initially and everyone can move into any desired role during the course of the project and improve their skills. 
+The work is shared between two members initially and everyone can move into any desired role during the course of the project and improve their skills.  
 
 
