@@ -38,7 +38,7 @@ We are the team of four from different backgrounds with very limited knowledge o
 
 ![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="40%" width="50%"}
 
-We are from various backgrounds having different skill sets and together we think we can achieve our objective. This brings out  various  soft skills like analytical skills, Presentation, Management, Inter-personal skills, creativity etc. through which the team will be able to deliver the product in a timely and systematic manner to the customer. As none of us have worked on developing an app before, we 	look forward to learn the required skiils and collaborate effectively to complete the task on time.
+We are from various backgrounds having different skill sets and together we think we can achieve our objective. This brings out  various  soft skills like analytical skills, Presentation, Management, Inter-personal skills, creativity etc. through which the team will be able to deliver the product in a timely and systematic manner to the customer. As none of us have worked on developing an app before, we 	look forward to learn the required skills and collaborate effectively to complete the task on time.
 
 ## Roles and Responsibilities
 
