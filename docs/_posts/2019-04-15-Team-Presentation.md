@@ -5,7 +5,7 @@ date: 2019-04-15
 ---
 
 **Team Machine**
-
+![Logo]({{site.baseurl}}/images/Logo.jpg "Team Logo")
 
 
 **Welcome** to our team’s first blog. In this blog we will introduce our Team, Project and our motivations.
@@ -15,7 +15,7 @@ date: 2019-04-15
 
 The project we will be working on is ‘Money Control’. About 60-70% people are not sure of how their money is spent and they end up broke by the end of the month. So, Money management is as important as earning money for every individual. And developing an app which can monitor earnings and expenses will help one to plan financially better and save them from not wasting their hard earned money.
 
-## Our Team
+## Our Team and Motivations
 
 We are the team of four from different backgrounds with very limited knowledge of computer science. Currently we all are studying Digital Engineering.
 
@@ -28,6 +28,9 @@ We are the team of four from different backgrounds with very limited knowledge o
 * **Pranay Teja** : I always wanted to learn computer programming, I think this course helps me not only to learn programming but also to develop an android app with that.
 
 ## Complimentary Skills
+
+![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination")
+
 We are from various backgrounds having different skill sets and together we think we can achieve our objective. As, none of us have worked on developing an app before, we 	look forward for effective collaboration of skills and complete the task on time.
 
 ## Roles and Responsibilities
@@ -49,6 +52,8 @@ Right from forming a team and gathering requirements till the final phase, prope
 
 (logo of GitHub and slack)
 ## Flexibility
+
+![Flexibility]({{site.baseurl}}/images/Flexibility.jpg "Flexibility")
 
 The work is shared between two members initially and everyone can move into any desired role during the course of the project and improve their skills. 
 
