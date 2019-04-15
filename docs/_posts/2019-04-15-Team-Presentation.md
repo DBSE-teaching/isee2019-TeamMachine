@@ -56,7 +56,7 @@ We tend to distribute the roles in a flexible manner and everyone is encouraged 
 
 Right from forming a team and gathering requirements till the final phase, proper communication between the members is very crucial and since all four of us have met in the context of course and so, it will be a challenge initially. 
 
-* We will use messaging apps like Whatsapp and Messenger
+* We will use messaging apps like Facebook Messenger and Whatsapp.
 
 * We have team meetings twice a week to discuss the progress of the project.
 
