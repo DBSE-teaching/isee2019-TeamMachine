@@ -36,7 +36,7 @@ We are the team of four from different backgrounds with very limited knowledge o
 
 ## Complimentary Skills
 
-![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="50%" width="50%"}
+![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="40%" width="50%"}
 
 We are from various backgrounds having different skill sets and together we think we can achieve our objective. As, none of us have worked on developing an app before, we 	look forward for effective collaboration of skills and complete the task on time.
 
