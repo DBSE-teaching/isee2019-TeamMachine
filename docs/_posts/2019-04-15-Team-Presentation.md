@@ -30,7 +30,7 @@ We are the team of four from different backgrounds with very limited knowledge o
 
 ## Complimentary Skills
 
-![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="50%" width="40%"}
+![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="50%" width="50%"}
 
 We are from various backgrounds having different skill sets and together we think we can achieve our objective. As, none of us have worked on developing an app before, we 	look forward for effective collaboration of skills and complete the task on time.
 
@@ -53,12 +53,12 @@ Right from forming a team and gathering requirements till the final phase, prope
 
 * We have team meetings twice a week to discuss the progress of the project.
 
-* We are using GitHub to share, merge and update our work and slack for communication. 
+* We are using GitHub to share, merge and update our work and also slack for communication. 
 
 (logo of GitHub and slack)
 ## Flexibility
 
-![Flexibility]({{site.baseurl}}/images/Flexibility.jpg "Flexibility"){:height="30%" width="30%"}
+![Flexibility]({{site.baseurl}}/images/Flexibility.jpg "Flexibility"){:height="35%" width="35%"}
 
 The work is shared between two members initially and everyone can move into any desired role during the course of the project and improve their skills. 
 
