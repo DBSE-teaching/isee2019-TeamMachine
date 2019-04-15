@@ -5,6 +5,7 @@ date: 2019-04-15
 ---
 
 **Team Machine**
+
 ![Logo]({{site.baseurl}}/images/Logo.jpg "Team Logo")
 
 
@@ -29,7 +30,7 @@ We are the team of four from different backgrounds with very limited knowledge o
 
 ## Complimentary Skills
 
-![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination")
+![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="30%" width="30%"}
 
 We are from various backgrounds having different skill sets and together we think we can achieve our objective. As, none of us have worked on developing an app before, we 	look forward for effective collaboration of skills and complete the task on time.
 
@@ -53,7 +54,7 @@ Right from forming a team and gathering requirements till the final phase, prope
 (logo of GitHub and slack)
 ## Flexibility
 
-![Flexibility]({{site.baseurl}}/images/Flexibility.jpg "Flexibility")
+![Flexibility]({{site.baseurl}}/images/Flexibility.jpg "Flexibility"){:height="30%" width="30%"}
 
 The work is shared between two members initially and everyone can move into any desired role during the course of the project and improve their skills. 
 
