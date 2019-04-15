@@ -56,11 +56,11 @@ We tend to distribute the roles in a flexible manner and everyone is encouraged 
 
 Right from forming a team and gathering requirements till the final phase, proper communication between the members is very crucial and since all four of us have met in the context of course and so, it will be a challenge initially. 
 
-* We will use messaging apps like Facebook Messenger and Whatsapp.
+* We are using GitHub to share, merge and update our work.
+
+* We are using Slack and whatsapp as basic means of communication.
 
 * We have team meetings twice a week to discuss the progress of the project.
-
-* We are using GitHub to share, merge and update our work and also slack for communication. 
 
 ![Communication]({{site.baseurl}}/images/Communication1.jpg "Communication"){:height="20%" width="20%"}
 
