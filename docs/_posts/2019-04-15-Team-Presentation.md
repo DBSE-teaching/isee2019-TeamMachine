@@ -20,7 +20,7 @@ The project we will be working on is ‘Money Control’. About 60-70% people ar
 
 Our objective is to develop a app that can enable user to give his earnings manually and keep track of his savings and spendings based on the requirement. In this way user can be able to restrain himself from spending the money on the things that matter him the least. We also intend to provide the statistics of his expenses on monthly basis.
 
-![Goals]({{site.baseurl}}/images/Goals.jpg "Goals")
+![Goals]({{site.baseurl}}/images/Goals.jpg "Goals"){:height="70%" width="50%"}
 
 ## Our Team and Motivations
 
@@ -36,7 +36,7 @@ We are the team of four from different backgrounds with very limited knowledge o
 
 ## Complimentary Skills
 
-![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="50%" width="50%"}
+![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="70%" width="70%"}
 
 We are from various backgrounds having different skill sets and together we think we can achieve our objective. As, none of us have worked on developing an app before, we 	look forward for effective collaboration of skills and complete the task on time.
 
