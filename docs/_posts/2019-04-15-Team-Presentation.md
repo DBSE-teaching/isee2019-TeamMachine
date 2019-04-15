@@ -16,6 +16,12 @@ date: 2019-04-15
 
 The project we will be working on is ‘Money Control’. About 60-70% people are not sure of how their money is spent and they end up broke by the end of the month. So, Money management is as important as earning money for every individual. And developing an app which can monitor earnings and expenses will help one to plan financially better and save them from not wasting their hard earned money.
 
+## Goals:
+
+Our objective is to develop a app that can enable user to give his earnings manually and keep track of his savings and spendings based on the requirement. In this way user can be able to restrain himself from spending the money on the things that matter him the least. We also intend to provide the statistics of his expenses on monthly basis.
+
+![Goals]({{site.baseurl}}/images/Goala.jpg "Goals")
+
 ## Our Team and Motivations
 
 We are the team of four from different backgrounds with very limited knowledge of computer science. Currently we all are studying Digital Engineering.
