@@ -62,7 +62,7 @@ Right from forming a team and gathering requirements till the final phase, prope
 
 * We are using GitHub to share, merge and update our work and also slack for communication. 
 
-![Communication]({{site.baseurl}}/images/Communication.jpg "Communication")
+![Communication]({{site.baseurl}}/images/Communication.png "Communication")
 
 ## Flexibility
 
