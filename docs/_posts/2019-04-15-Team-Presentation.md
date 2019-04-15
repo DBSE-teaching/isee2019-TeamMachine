@@ -30,7 +30,7 @@ We are the team of four from different backgrounds with very limited knowledge o
 
 ## Complimentary Skills
 
-![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="30%" width="30%"}
+![Team Coordination]({{site.baseurl}}/images/Team Coordination.jpg "Team Coordination"){:height="50%" width="40%"}
 
 We are from various backgrounds having different skill sets and together we think we can achieve our objective. As, none of us have worked on developing an app before, we 	look forward for effective collaboration of skills and complete the task on time.
 
@@ -39,7 +39,9 @@ We are from various backgrounds having different skill sets and together we thin
 We tend to distribute the roles in a flexible manner and everyone is encouraged to take up any role during the development. But initially,
 
 * **Ahmed Elkhouly and Nishad pawaskar**:  Design and Implementation 
+
 * **Muralidhar Reddy** : Maintain Blog content and Testing
+
 * **Pranay Teja**: Team Management, Documentation and Testing
 
 ## Communication
@@ -48,7 +50,9 @@ We tend to distribute the roles in a flexible manner and everyone is encouraged 
 Right from forming a team and gathering requirements till the final phase, proper communication between the members is very crucial and since all four of us have met in the context of course and so, it will be a challenge initially. 
 
 * We will use messaging apps like Whatsapp and Messenger
+
 * We have team meetings twice a week to discuss the progress of the project.
+
 * We are using GitHub to share, merge and update our work and slack for communication. 
 
 (logo of GitHub and slack)
