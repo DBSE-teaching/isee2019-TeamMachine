@@ -20,7 +20,7 @@ The project we will be working on is ‘Money Control’. About 60-70% people ar
 
 Our objective is to develop a app that can enable user to give his earnings manually and keep track of his savings and spendings based on the requirement. In this way user can be able to restrain himself from spending the money on the things that matter him the least. We also intend to provide the statistics of his expenses on monthly basis.
 
-![Goals]({{site.baseurl}}/images/Goals.jpg "Goals"){:height="50%" width="50%"}
+![Goals]({{site.baseurl}}/images/Goals.jpg "Goals"){:height="30%" width="30%"}
 
 ## Our Team and Motivations
 
