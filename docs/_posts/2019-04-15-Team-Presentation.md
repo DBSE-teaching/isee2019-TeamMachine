@@ -52,7 +52,8 @@ We tend to distribute the roles in a flexible manner and everyone is encouraged 
 
 ## Communication
 
-“If you communicate, you can just get by. If you communicate effectively, you can make wonders”
+“If you communicate, you can just get by. If you communicate effectively, you can make wonders”.
+
 Right from forming a team and gathering requirements till the final phase, proper communication between the members is very crucial and since all four of us have met in the context of course and so, it will be a challenge initially. 
 
 * We will use messaging apps like Whatsapp and Messenger
@@ -61,7 +62,8 @@ Right from forming a team and gathering requirements till the final phase, prope
 
 * We are using GitHub to share, merge and update our work and also slack for communication. 
 
-(logo of GitHub and slack)
+![Communication]({{site.baseurl}}/images/Communication.jpg "Communication")
+
 ## Flexibility
 
 ![Flexibility]({{site.baseurl}}/images/Flexibility.jpg "Flexibility"){:height="35%" width="35%"}
