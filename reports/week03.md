@@ -1,11 +1,12 @@
  
- # Status Report
+ **Status Report**
  
- Previous Week's Goals
  
-   N/A
+ ## Previous Week's Goals:
+ 
+      N/A
    
- This week's Work
+ ## This week's Work:
  
  
    > Initial meeting to discuss all the tasks given.
@@ -23,13 +24,29 @@
    > Worked on Team Presentation.
    
  
-Goals for next week
+## Goals for next week:
 
    > Understand and analyse user requirements.
    
    > Develop an outlook of the app based on the requirements.
    
    > Responsibilities Assigned as of now:
+      
+                  Ahmed and Nishad : Design and development of application.
+                  
+                  Muralidhar :  Blog and Reports Writing.
+                  
+                  Pranay: Construct basic structure.
+  
+  ## User Meeting Agenda
+  
+   > Gather requirements from the user.
+   
+   > Features and functionalities that app should perform.
+   
+   > Architecture of application.
+   
+   > Disscuss on what he wants in basic prototype.
           
           
  
