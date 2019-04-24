@@ -19,7 +19,7 @@
    
    > Started to understand the features of Android studio.
    
-   > Discussed about the user stories with the user and took someother requirements.
+   > Discussed about the user stories with the user and took some more requirements.
    
    > Roles and Responsibilities :
    
@@ -43,7 +43,11 @@
    > And to discuss about the prototype presentation.
    
    
- ## User Meeting Agenda:
+ ## User Meeting Agenda
   
-   >            
+   > Overview of a prototype.
+   
+   > Presenting user stories.
+   
+   
    
