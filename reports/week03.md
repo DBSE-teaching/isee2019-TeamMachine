@@ -1,5 +1,5 @@
  
- *Status Report*
+ ## *Status Report*
  
  
  ## Previous Week's Goals:
