@@ -1,5 +1,5 @@
  
- **Status Report**
+ *Status Report*
  
  
  ## Previous Week's Goals:
@@ -38,7 +38,7 @@
                   
                   Pranay: Construct basic structure.
   
-  ## User Meeting Agenda
+  ## User Meeting Agenda:
   
    > Gather requirements from the user.
    
