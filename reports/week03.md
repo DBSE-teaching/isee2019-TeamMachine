@@ -28,6 +28,8 @@
 
    > Understand and analyse user requirements.
    
+   > Create User stories based on the requirements.
+   
    > Develop an outlook of the app based on the requirements.
    
    > Responsibilities Assigned as of now:
