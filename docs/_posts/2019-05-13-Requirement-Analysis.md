@@ -12,14 +12,14 @@ To start with the development of any application, one has to analyse the require
 
 ## Requirement Gathering
 
-![Requirement Gathering]({{site.baseurl}}/images/RG3.png "RG3"){:height="20%" width="80%"}
+![Requirement Gathering]({{site.baseurl}}/images/RG3.png "RG3"){: width="80%"}
 
 So, after deciding to develop an app on Money Control each individual in the group was very curious to know what customer wants as there are few such apps available in market. We had three meetings with the user in and the customer has specified his app requirements in general during the first meeting. Each member has noted down the customer needs in their own understanding and they were consolidated later. We even asked him if he needs any extra features and improvements in the specifications, but the customer showed us that he knows what he wants and suggested that the extra features can be added later if he feels the need for them.
 
 
 ## Requirement Analysis
 
-![Requirement Analysis]({{site.baseurl}}/images/RA2.jpg "RA2"){:height="20%" width="80%"}
+![Requirement Analysis]({{site.baseurl}}/images/RA2.jpg "RA2"){: width="80%"}
 
 It is a fact that everyone’s perception is not same. So, we had a meeting to check on the contradictions and ambiguities in the gathered requirements and consolidate them in a easy and understandable way by removing redundancies . With this, we got a clear idea on what was expected form us. We started preparing user stories right after our first meeting with the customer and the questions that were encountered were recorded. We prioritized the uncertainties and customer gave us clear picture during second meeting and also gave some extra requirements.
 
