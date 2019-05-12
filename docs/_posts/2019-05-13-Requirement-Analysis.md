@@ -19,7 +19,7 @@ So, after deciding to develop an app on Money Control each individual in the gro
 
 ## Requirement Analysis
 
-![Requirement Analysis]({{site.baseurl}}/images/RA2.jpg "RA2"){:height="90%" width="80%"}
+![Requirement Analysis]({{site.baseurl}}/images/RA2.jpg "RA2"){:height="70%" width="100%"}
 
 It is a fact that everyone’s perception is not same. So, we had a meeting to check on the contradictions and ambiguities in the gathered requirements and consolidate them in a easy and understandable way by removing redundancies . With this, we got a clear idea on what was expected form us. We started preparing user stories right after our first meeting with the customer and the questions that were encountered were recorded. We prioritized the uncertainties and customer gave us clear picture during second meeting and also gave some extra requirements.
 
