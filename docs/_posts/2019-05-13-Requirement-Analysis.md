@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Team Presentation"
+title: "Requirement Analysis"
 date: 2019-05-13
 ---
 
@@ -19,7 +19,7 @@ So, after deciding to develop an app on Money Control each individual in the gro
 
 ## Requirement Analysis
 
-![Requirement Analysis]({{site.baseurl}}/images/RA2.jpg "RA2"){:height="80%" width="60%"}
+![Requirement Analysis]({{site.baseurl}}/images/RA2.jpg "RA2"){:height="90%" width="80%"}
 
 It is a fact that everyone’s perception is not same. So, we had a meeting to check on the contradictions and ambiguities in the gathered requirements and consolidate them in a easy and understandable way by removing redundancies . With this, we got a clear idea on what was expected form us. We started preparing user stories right after our first meeting with the customer and the questions that were encountered were recorded. We prioritized the uncertainties and customer gave us clear picture during second meeting and also gave some extra requirements.
 
@@ -38,37 +38,37 @@ B)Optional Features
 
 * User friendly interface.
 
-*Income should be entered manually and should be modifiable.
+* Income should be entered manually and should be modifiable.
 
-*Recurring expenses like rent, subscription fees etc., should be added to expenses automatically.
+* Recurring expenses like rent, subscription fees etc., should be added to expenses automatically.
 
-*Predefined Categories for expenses like fixed and casual etc.,.
+* Predefined Categories for expenses like fixed and casual etc.,.
 
-*Purpose of each expense and the time at which the money was spent.
+* Purpose of each expense and the time at which the money was spent.
 
-*Expenses should be modifiable.
+* Expenses should be modifiable.
 
-*Keep track of how the payment was done(Via card, cash etc.,)
+* Keep track of how the payment was done(Via card, cash etc.,)
 
-*Numeric keyboard only while entering amount.
+* Numeric keyboard only while entering amount.
 
-*Filters like By date, By Category and By Payment mode for viewing expenses.
+* Filters like By date, By Category and By Payment mode for viewing expenses.
 
-*Mode of payments for recurring expenses.
+* Mode of payments for recurring expenses.
 
-*Savings should be visible in the app.
+* Savings should be visible in the app.
 
 ## Optional Features
 
-*Set monthly budget.
+* Set monthly budget.
 
-*Notification on monthly basis.
+* Notification on monthly basis.
 
-*Pictorial or graphical representation of the income, expenses and savings.
+* Pictorial or graphical representation of the income, expenses and savings.
 
-*User settings for any change of currency.
+* User settings for any change of currency.
 
-*Push notification when monthly budget is exceeded.
+* Push notification when monthly budget is exceeded.
 
 ## User Stories
 
@@ -90,7 +90,7 @@ We presented all the user stories and requirements in our third meeting to the c
 
 * Initially we thought that the app is an online platform so that the bank transactions will be noted down automatically but after meeting with the customer we got to know that he wants to enter data manually.
 
-*We thought that the data should be protected by a password but later customer told he just wants a pin.
+* We thought that the data should be protected by a password but later customer told he just wants a pin.
 
 ## App Logo
 
