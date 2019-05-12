@@ -12,7 +12,7 @@ To start with the development of any application, one has to analyse the require
 
 ## Requirement Gathering
 
-![Requirement Gathering]({{site.baseurl}}/images/RG3.jpg "RG3")
+![Requirement Gathering]({{site.baseurl}}/images/RG3.png "RG3")
 
 So, after deciding to develop an app on Money Control each individual in the group was very curious to know what customer wants as there are few such apps available in market. We had three meetings with the user in and the customer has specified his app requirements in general during the first meeting. Each member has noted down the customer needs in their own understanding and they were consolidated later. We even asked him if he needs any extra features and improvements in the specifications, but the customer showed us that he knows what he wants and suggested that the extra features can be added later if he feels the need for them.
 
@@ -80,7 +80,7 @@ The user stories were formulated right after the first meeting by stepping into 
 Use case diagrams defines the functions that the app should perform by using actors and use cases. The below figures denotes a typical use case diagram of our application.
 
 
-![USe Case 2]({{site.baseurl}}/images/UC2.jpg "USer Case for expenses")
+![USe Case 2]({{site.baseurl}}/images/UC2.png "USer Case for expenses")
 
 ## Requirement Validation
 
