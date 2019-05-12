@@ -1,3 +1,4 @@
+---
 layout: post
 title: "Team Presentation"
 date: 2019-05-13
@@ -11,14 +12,14 @@ To start with the development of any application, one has to analyse the require
 
 ## Requirement Gathering
 
-![Logo]({{site.baseurl}}/images/RG3.jpg "RG3")
+![Requirement Gathering]({{site.baseurl}}/images/RG3.jpg "RG3")
 
 So, after deciding to develop an app on Money Control each individual in the group was very curious to know what customer wants as there are few such apps available in market. We had three meetings with the user in and the customer has specified his app requirements in general during the first meeting. Each member has noted down the customer needs in their own understanding and they were consolidated later. We even asked him if he needs any extra features and improvements in the specifications, but the customer showed us that he knows what he wants and suggested that the extra features can be added later if he feels the need for them.
 
 
 ## Requirement Analysis
 
-![Logo]({{site.baseurl}}/images/RA2.jpg "RA2")
+![Requirement Analysis]({{site.baseurl}}/images/RA2.jpg "RA2"){:height="80%" width="60%"}
 
 It is a fact that everyone’s perception is not same. So, we had a meeting to check on the contradictions and ambiguities in the gathered requirements and consolidate them in a easy and understandable way by removing redundancies . With this, we got a clear idea on what was expected form us. We started preparing user stories right after our first meeting with the customer and the questions that were encountered were recorded. We prioritized the uncertainties and customer gave us clear picture during second meeting and also gave some extra requirements.
 
@@ -33,9 +34,9 @@ B)Optional Features
 
 ## Vital Features
 
-*Protect the data by pin.
+* Protect the data by pin.
 
-*User friendly interface.
+* User friendly interface.
 
 *Income should be entered manually and should be modifiable.
 
@@ -79,7 +80,7 @@ The user stories were formulated right after the first meeting by stepping into 
 Use case diagrams defines the functions that the app should perform by using actors and use cases. The below figures denotes a typical use case diagram of our application.
 
 
-![Logo]({{site.baseurl}}/images/UC2.jpg "USer Case for expenses")
+![USe Case 2]({{site.baseurl}}/images/UC2.jpg "USer Case for expenses")
 
 ## Requirement Validation
 
@@ -87,7 +88,7 @@ We presented all the user stories and requirements in our third meeting to the c
 
 ## Wrong assumptions
 
-*Initially we thought that the app is an online platform so that the bank transactions will be noted down automatically but after meeting with the customer we got to know that he wants to enter data manually.
+* Initially we thought that the app is an online platform so that the bank transactions will be noted down automatically but after meeting with the customer we got to know that he wants to enter data manually.
 
 *We thought that the data should be protected by a password but later customer told he just wants a pin.
 
