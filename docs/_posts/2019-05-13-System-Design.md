@@ -75,3 +75,12 @@ We have quickly started with the implementation of the application since we were
 ## Prototype
 
 And we are ready with the basic prototype of the app.
+
+
+![Home Page]({{site.baseurl}}/images/Homeapp.png "Home app")
+
+![Income]({{site.baseurl}}/images/Incomeapp.png "Income Page")
+
+
+
+
