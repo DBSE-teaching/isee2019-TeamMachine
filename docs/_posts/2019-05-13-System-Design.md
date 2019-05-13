@@ -16,9 +16,9 @@ These diagrams gives a pictorial representation of work flows from one activity 
 
 Activity Diagram
 
-![Activity1]({{site.baseurl}}/images/Activity1.png "Activity1"){:height="60%" width="80%"}
+![Activity1]({{site.baseurl}}/images/Activity1.png "Activity1"){:height="50%" width="70%"}
 
-![Activity2]({{site.baseurl}}/images/Activity2.jpeg "Activity2"){:height="40%" width="60%"}
+![Activity2]({{site.baseurl}}/images/Activity2.jpeg "Activity2"){:height="30%" width="50%"}
 
 ## Class Diagram
 
