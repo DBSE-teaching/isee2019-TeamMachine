@@ -13,6 +13,8 @@ So, right after gathering requirements we had to think about the user interface,
 ## Activity Diagrams
 
 These diagrams gives a pictorial representation of work flows from one activity to another. So, they basically shows the operations performed when user clicks on the certain buttons.
+![Activity1]({{site.baseurl}}/images/Activity1.png "Activity1"){:height="70%" width="80%"}
+![Activity2]({{site.baseurl}}/images/Activity2.jpeg "Activity2"){:height="70%" width="80%"}
 
 ## Class Diagram
 
