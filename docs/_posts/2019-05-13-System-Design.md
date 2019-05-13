@@ -77,9 +77,9 @@ We have quickly started with the implementation of the application since we were
 And we are ready with the basic prototype of the app.
 
 
-![Home Page]({{site.baseurl}}/images/Homeapp.png "Home app")
+![Home Page]({{site.baseurl}}/images/Homeapp.png "Home app"){:height="20%" width="40%"}
 
-![Income]({{site.baseurl}}/images/Income.png "Income Page")
+![Income]({{site.baseurl}}/images/Income.png "Income Page"){:height="20%" width="40%"}
 
 
 
