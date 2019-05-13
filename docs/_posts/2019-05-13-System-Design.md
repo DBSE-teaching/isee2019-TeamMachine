@@ -58,6 +58,9 @@ Contact Us
 
 ![Contact US]({{site.baseurl}}/images/Contact.png "Contact Us")
 
+Methods
+
+![Methods]({{site.baseurl}}/images/Methods.png "Methods")
 
 
 ## Development Strategy
