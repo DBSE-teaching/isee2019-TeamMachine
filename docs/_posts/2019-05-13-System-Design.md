@@ -76,6 +76,9 @@ We have quickly started with the implementation of the application since we were
 
 And we are ready with the basic prototype of the app.
 
+![Login]({{site.baseurl}}/images/Loginapp.png "Login"){:height="15%" width="40%"}
+
+User will be able to view the data in the app only after entering the passcode which will be stored in the database and thus providing security.
 
 ![Home Page]({{site.baseurl}}/images/Homeapp.png "Home app"){:height="15%" width="40%"}
 
