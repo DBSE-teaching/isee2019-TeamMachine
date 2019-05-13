@@ -24,7 +24,7 @@ Activity Diagram
 
 These diagrams shows the different aspects for evolving the code for the application by viewing the classes, attributes and relationships among the objects that are used in developing the code. This make the code readable and extensible.
 
-![Class]({{site.baseurl}}/images/Class.png "Class Diagram")
+![Class]({{site.baseurl}}/images/Class.png "Class Diagram"){:height="70%" width="80%"}
 
 ## Development Strategy
 
