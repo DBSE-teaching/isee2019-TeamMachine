@@ -36,11 +36,34 @@ Home
 
 Navigation
 
-![Navigation]({{site.baseurl}}/images/Naviagation Pane.png "Home")
+![Navigation]({{site.baseurl}}/images/Naviagation.png "Navigation")
 
 Income/Expenses
 
 ![Income]({{site.baseurl}}/images/Income_Expenses.png "Income")
+
+Categories
+
+![Categories]({{site.baseurl}}/images/Categories.png "Categories")
+
+Savings
+
+![Savings]({{site.baseurl}}/images/Savings.png "Savings")
+
+Settings
+
+![Settings]({{site.baseurl}}/images/Settings.png "Settings")
+
+Contact Us
+
+![Contact US]({{site.baseurl}}/images/Contact.png "Contact Us")
+
+Statistics
+
+![Statistics]({{site.baseurl}}/images/Statistics.png "Statistics")
+
+
+
 
 
 
