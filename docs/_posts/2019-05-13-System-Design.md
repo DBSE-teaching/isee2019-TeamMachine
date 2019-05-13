@@ -79,7 +79,7 @@ And we are ready with the basic prototype of the app.
 
 ![Home Page]({{site.baseurl}}/images/Homeapp.png "Home app")
 
-![Income]({{site.baseurl}}/images/Incomeapp.png "Income Page")
+![Income]({{site.baseurl}}/images/Income.png "Income Page")
 
 
 
