@@ -64,15 +64,9 @@ Contact Us
 
 We have quickly started with the implementation of the application since we were asked to submit the basic prototype by mid May. We assigned tasks through slack and GitHub and the progress was always tracked by scrum master and reviewed the same during our meetings that happened twice in a week.The time for designing each user story was estimated and we will try to finish it without any deadline slip. In each sprint, a steady progress is always mandatory which helps in predicting that the end product completion happens in time. As of now, we will follow the software prototyping method along with continuous integration which means that incomplete developments of the end product will happen along with merging of all development copies to a common repository.
 
-* Sprint 1 - We had grouped the total layout creation and login page for the user with a time frame of one week and we have completed it. 
+![Development]({{site.baseurl}}/images/DS.jpg "D Strategy")
 
-* Sprint 2 - We created the home page and provided the options for the user to enter the income manually and now were in the phase of creating the page for expenses.
-
-* Sprint 3 - Database integration and programming activity and the other extra features will be performed as a apart of third sprint and complete the entire development of the app.
-
-* Sprint 4- We are planning to do the unit and integration testing once the entire app is developed and projected time frame is mid June.
-
-## Prototype
+## Basic Prototype
 
 And we are ready with the basic prototype of the app.
 
