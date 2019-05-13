@@ -58,13 +58,6 @@ Contact Us
 
 ![Contact US]({{site.baseurl}}/images/Contact.png "Contact Us")
 
-Statistics
-
-![Statistics]({{site.baseurl}}/images/Statistics.png "Statistics")
-
-
-
-
 
 
 ## Development Strategy
