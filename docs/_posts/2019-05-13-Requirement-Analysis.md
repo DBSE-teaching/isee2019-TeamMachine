@@ -74,6 +74,11 @@ B)Optional Features
 
 The user stories were formulated right after the first meeting by stepping into his shoes and making sure they fulfill all the requirements. They were arranged in the priority wise and presented in front of the user. Below are the user stories that were formulated.
 
+So, the story is written the format of what he wants and why(written in brackets) with the purpose to make it very readable and understandable.
+
+![Userstory]({{site.baseurl}}/images/Userstory1.jpg "USer Story"){:height="70%" width="80%"}
+
+
 
 ## Use Case Diagram  
 
