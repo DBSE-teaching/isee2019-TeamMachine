@@ -24,6 +24,8 @@ Activity Diagram
 
 These diagrams shows the different aspects for evolving the code for the application by viewing the classes, attributes and relationships among the objects that are used in developing the code. This make the code readable and extensible.
 
+![Class]({{site.baseurl}}/images/Class.png "Class Diagram")
+
 ## Development Strategy
 
 We have quickly started with the implementation of the application since we were asked to submit the basic prototype by mid May. We assigned tasks through slack and GitHub and the progress was always tracked by scrum master and reviewed the same during our meetings that happened twice in a week.The time for designing each user story was estimated and we will try to finish it without any deadline slip. In each sprint, a steady progress is always mandatory which helps in predicting that the end product completion happens in time. As of now, we will follow the software prototyping method along with continuous integration which means that incomplete developments of the end product will happen along with merging of all development copies to a common repository.
