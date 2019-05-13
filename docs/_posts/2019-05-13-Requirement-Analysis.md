@@ -96,7 +96,7 @@ We presented all the user stories and requirements in our third meeting to the c
 
 Since the customer can keep track of his money via cellphone, we named the app as “CELEDGER”-Cellphone Ledger. And this is our logo:
 
-![App Logo]({{site.baseurl}}/images/Logo.png "App Logo"){:height="15%" width="55%"}
+![App Logo]({{site.baseurl}}/images/Logo.png "App Logo"){:height="15%" width="20%"}
 
 
 So, the journey of the requirement analysis comes to end now and we started to focus on the development of app and can’t wait to present you the basic prototype in the next blog. 
