@@ -36,7 +36,7 @@ Home
 
 Navigation
 
-![Navigation]({{site.baseurl}}/images/Naviagation.png "Navigation")
+![Navigation]({{site.baseurl}}/images/Navigation.png "Navigation")
 
 Income/Expenses
 
