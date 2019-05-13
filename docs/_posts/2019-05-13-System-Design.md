@@ -82,7 +82,7 @@ The above is the Home screen in which you will be able to add income and expendi
 
 Once the + button is clicked under income, user will be redirected to the the above screen where he can add the amount, source of the income and the time (i.e, date) on which the amount was earned.
 
-We'll come soon with more updates. Stay tuned.
+We'll come soon with more updates. Stay tuned. 
 
 
 
