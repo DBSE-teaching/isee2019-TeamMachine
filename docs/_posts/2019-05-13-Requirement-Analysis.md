@@ -80,7 +80,9 @@ The user stories were formulated right after the first meeting by stepping into 
 Use case diagrams defines the functions that the app should perform by using actors and use cases. The below figures denotes a typical use case diagram of our application.
 
 
-![USe Case 2]({{site.baseurl}}/images/UC2.png "USer Case for expenses")
+![Usecase1]({{site.baseurl}}/images/Usecase1.png "USer Case diagram")
+
+![Usecase2]({{site.baseurl}}/images/Usecase2.png "USer Case diagram expenses")
 
 ## Requirement Validation
 
