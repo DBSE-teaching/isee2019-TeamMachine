@@ -71,7 +71,7 @@ We have quickly started with the implementation of the application since we were
 
 ## Basic Prototype
 
-And we are ready with the basic prototype of the app which you can download withe the link below. We are hoping to present you th entire app in the next blog.
+And we are ready with the basic prototype of the app which you can download withe the link below. We are hoping to present you the fully functional app in the next blog.
 
 <a href="https://github.com/DBSE-teaching/isee2019-TeamMachine/blob/CeledgerAppAPK/docs/Celedger1.apk" target="_blank"><b>Click here to download</b></a>
 
