@@ -73,7 +73,7 @@ We have quickly started with the implementation of the application since we were
 
 And we are ready with the basic prototype of the app which you can download withe the link below. We are hoping to present you th entire app in the next blog.
 
-<a href="https://github.com/DBSE-teaching/isee2019-TeamMachine/blob/CeledgerAppAPK/docs/Celedger1.apk" target="_blank"><b>Application Download Link</b></a>
+<a href="https://github.com/DBSE-teaching/isee2019-TeamMachine/blob/CeledgerAppAPK/docs/Celedger1.apk" target="_blank"><b>CLick here to download</b></a>
 
 ![Login]({{site.baseurl}}/images/Loginapp.jpg "Login"){:height="15%" width="40%"}
 
