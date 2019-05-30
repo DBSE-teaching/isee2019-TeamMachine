@@ -7,13 +7,38 @@
     tools:context=".IncomeActivity">
     //CHANGE THE CONSTRAINT LAYOUT TO LINEAR LAYOUT
 
+    //TOOLBAR
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/incometoolbar"
+        android:background="@color/design_default_color_primary"
+        android:elevation="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INCOME"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_weight="0.99"/>
+        //ADD SIGN
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_sort_black_24dp"/>
+    </LinearLayout>
+
     //RECYCLER VIEW OF INCOME LIST FOR SCROLLABLE CONTENT
     <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/IncmelistRCV"
         android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/incometoolbar">
     </android.support.v7.widget.RecyclerView>
 
     <LinearLayout

@@ -6,12 +6,36 @@
     tools:context=".MainActivity">
     //CHANGE THE CONSTRAINT LAYOUT TO RELATIVE LAYOUT
 
+    //TOOLBAR
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/maintoolbar"
+        android:background="@color/design_default_color_primary"
+        android:elevation="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CELEDGER"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_weight="0.99"/>
+        //ADD SIGN
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_add_black_24dp"/>
+    </LinearLayout>
+
     //INCOME HEADING
     <LinearLayout
         android:id="@+id/linearLayoutIncme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_below="@+id/maintoolbar"
         android:background="#BCBEBE"
         android:elevation="5dp"
         android:padding="8dp">

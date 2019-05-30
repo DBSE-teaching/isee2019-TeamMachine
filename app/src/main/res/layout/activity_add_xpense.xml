@@ -7,11 +7,36 @@
     tools:context=".AddIncome">
     //CHANGE THE CONSTRAINT LAYOUT TO RELATIVE LAYOUT
 
+    //TOOLBAR
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/addxpensetoolbar"
+        android:background="@color/design_default_color_primary"
+        android:elevation="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CELEDGER"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_weight="0.99"/>
+        //ADD SIGN
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_add_black_24dp"/>
+    </LinearLayout>
+
     //AMOUNT
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_below="@+id/addxpensetoolbar"
         android:id="@+id/expamtlayout">
 
         //SHOWS TEXT
