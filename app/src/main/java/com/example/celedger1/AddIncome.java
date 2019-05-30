@@ -25,11 +25,9 @@ public class AddIncome extends AppCompatActivity {
 
     DatabaseHelper income_db;
     SQLiteDatabase incdb;
-
     EditText addincamt, addincdte;
     MaterialBetterSpinner addinccat, addincPM;
     Button addincomebtn;
-
     DatePickerDialog incdatePicker;
 
     String[] IncomeCat = {"Salary", "Payment", "Others"}, PayMethod = {"Cash", "Online Transfer"};

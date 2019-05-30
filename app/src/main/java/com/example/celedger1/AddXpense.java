@@ -25,11 +25,9 @@ public class AddXpense extends AppCompatActivity {
 
     DatabaseHelper xpense_db;
     SQLiteDatabase expdb;
-
     EditText addexpamt, addexpdte;
     MaterialBetterSpinner addexpcat, addexpPM;
     Button addexpensebtn;
-
     DatePickerDialog expdatePicker;
 
     String[] XpenseCat = {"Food", "Travel", "Fees", "Bills", "Shopping", "Rent", "Others"}, PayMethodxp = {"Cash", "Online Transfer", "Card"};
