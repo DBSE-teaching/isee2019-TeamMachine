@@ -1,6 +1,7 @@
 package com.example.celedger1;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -37,6 +38,8 @@ public class AddXpense extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_xpense);
 
+        Button addincme = findViewById(R.id.incmeimg);
+
         xpense_db = new DatabaseHelper(this);
         expdb = xpense_db.getWritableDatabase();
 
@@ -45,6 +48,15 @@ public class AddXpense extends AppCompatActivity {
         addexpPM = findViewById(R.id.exppm);
         addexpdte = findViewById(R.id.expdte);
         addexpensebtn = findViewById(R.id.addexpensebtn);
+
+        //Income Add Image
+        addincme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntentaddincome = new Intent(getApplicationContext(),AddIncome.class);
+                startActivity(startIntentaddincome);
+            }
+        });
 
         //INCOME CATEGORY ADAPTOR
         ArrayAdapter<String> XpenseCategory = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, XpenseCat);

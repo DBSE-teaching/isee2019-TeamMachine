@@ -1,6 +1,7 @@
 package com.example.celedger1;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -36,6 +37,16 @@ public class AddIncome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_income);
+
+        Button addxpnse = findViewById(R.id.xpnseimg);
+
+        addxpnse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntentaddxpense = new Intent(getApplicationContext(),AddXpense.class);
+                startActivity(startIntentaddxpense);
+            }
+        });
 
         income_db = new DatabaseHelper(this);
         incdb = income_db.getWritableDatabase();

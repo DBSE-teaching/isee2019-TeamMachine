@@ -6,12 +6,37 @@
     tools:context=".MainActivity">
     //CHANGE THE CONSTRAINT LAYOUT TO RELATIVE LAYOUT
 
+    //TOOLBAR
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/maintoolbar"
+        android:background="@color/design_default_color_primary"
+        android:elevation="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CELEDGER"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_weight="0.99"/>
+        //ADD SIGN
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_add_black_24dp"
+            android:id="@+id/addxpnseimg"/>
+    </LinearLayout>
+
     //INCOME HEADING
     <LinearLayout
         android:id="@+id/linearLayoutIncme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_below="@+id/maintoolbar"
         android:background="#BCBEBE"
         android:elevation="5dp"
         android:padding="8dp">
@@ -50,29 +75,12 @@
         android:padding="4dp"
         ></android.support.v7.widget.RecyclerView>
 
-    //ADD INCOME DATA
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/addincome"
-        android:layout_below="@+id/Incmelist">
-
-        //ADD SIGN
-        <ImageView
-            android:id="@+id/addincomeimg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:src="@drawable/baseline_add_box_black_18dp" />
-
-    </LinearLayout>
-
     //EXPENDITURE HEADING
     <LinearLayout
         android:id="@+id/linearLayoutxpnd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/addincome"
+        android:layout_below="@+id/Incmelist"
         android:layout_marginTop="2dp"
         android:background="#BCBEBE"
         android:elevation="5dp"
@@ -114,7 +122,7 @@
         android:padding="4dp"
         ></android.support.v7.widget.RecyclerView>
 
-    //ADD EXPENSE DATA
+    <!--//ADD EXPENSE DATA
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -129,7 +137,7 @@
             android:layout_weight="0.45"
             android:src="@drawable/baseline_add_box_black_18dp" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
     //SAVINGS
     <LinearLayout

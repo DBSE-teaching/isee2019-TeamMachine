@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -33,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
         TextView ExpenseAmount = findViewById(R.id.expendamt);
         TextView IncomeAmount = findViewById(R.id.incomeamt);
         TextView SavingAmount = findViewById(R.id.savingamt);
-        LinearLayout linearaddincomebtn = findViewById(R.id.addincome);
-        LinearLayout linearaddxpensebtn = findViewById(R.id.addxpense);
+        ImageView addXpense = findViewById(R.id.addxpnseimg);
         RecyclerView Incmelist = findViewById(R.id.Incmelist);
         RecyclerView Xpnselist = findViewById(R.id.Xpnselist);
 
@@ -62,15 +62,6 @@ public class MainActivity extends AppCompatActivity {
         icAdaptor = new IncmeAdaptor(this, getAllIncome());
         Incmelist.setAdapter(icAdaptor);
 
-        //Income Add Image
-        linearaddincomebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntentaddincome = new Intent(getApplicationContext(),AddIncome.class);
-                startActivity(startIntentaddincome);
-            }
-        });
-
         //Linear Layout Expenditure
         linearLayoutxpnd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         xpAdaptor = new XpnseAdaptor(this, getAllXpense());
         Xpnselist.setAdapter(xpAdaptor);
 
-        linearaddxpensebtn.setOnClickListener(new View.OnClickListener() {
+        addXpense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startIntentaddxpense = new Intent(getApplicationContext(),AddXpense.class);

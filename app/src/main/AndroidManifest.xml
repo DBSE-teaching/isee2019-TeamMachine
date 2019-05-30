@@ -13,7 +13,8 @@
         <activity android:name=".AddIncome" />
         <activity android:name=".ExpendActivity" />
         <activity android:name=".IncomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
