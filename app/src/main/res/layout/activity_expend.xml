@@ -20,8 +20,10 @@
             android:text="EXPENSE"
             android:layout_gravity="center_vertical"
             android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_weight="0.99"/>
+            android:textSize="18sp"
+            android:textColor="#FFFF"
+            android:layout_weight="0.99"
+            android:paddingLeft="20dp"/>
         //SORT SIGN
         <ImageView
             android:layout_width="wrap_content"

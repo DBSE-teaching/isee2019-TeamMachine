@@ -20,7 +20,9 @@
             android:text="INCOME"
             android:layout_gravity="center_vertical"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            android:textColor="#FFFF"
+            android:paddingLeft="20dp"
             android:layout_weight="0.99"/>
         //SORT SIGN
         <ImageView
