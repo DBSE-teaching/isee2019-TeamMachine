@@ -14,6 +14,13 @@
         android:background="@color/design_default_color_primary"
         android:elevation="40dp">
 
+        <ImageView
+            android:id="@+id/goHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_home_white_24dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,6 +33,7 @@
             android:layout_weight="0.99"/>
         //SORT SIGN
         <ImageView
+            android:id="@+id/incmefilter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"

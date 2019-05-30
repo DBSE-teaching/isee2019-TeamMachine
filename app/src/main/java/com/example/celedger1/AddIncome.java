@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
@@ -39,12 +40,20 @@ public class AddIncome extends AppCompatActivity {
         setContentView(R.layout.activity_add_income);
 
         Button addxpnse = findViewById(R.id.xpnseimg);
+        ImageView Home = findViewById(R.id.goHome);
 
         addxpnse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startIntentaddxpense = new Intent(getApplicationContext(),AddXpense.class);
                 startActivity(startIntentaddxpense);
+            }
+        });
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntentmain = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(startIntentmain);
             }
         });
 
@@ -127,6 +136,9 @@ public class AddIncome extends AppCompatActivity {
                     Toast.makeText(AddIncome.this, "Data Inserted", Toast.LENGTH_LONG).show();
                 else
                     Toast.makeText(AddIncome.this, "Data Not Inserted", Toast.LENGTH_LONG).show();
+
+                Intent startIntentIncme = new Intent(getApplicationContext(), IncomeActivity.class);
+                startActivity(startIntentIncme);
             }
         });
     }

@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         ImageView addXpense = findViewById(R.id.addxpnseimg);
         RecyclerView Incmelist = findViewById(R.id.Incmelist);
         RecyclerView Xpnselist = findViewById(R.id.Xpnselist);
-
         xpense_db = new DatabaseHelper(this);
         expdb = xpense_db.getWritableDatabase();
 
@@ -49,14 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(startIntentIncme);
             }
         });
-
+        //Show Total Income
         Cursor icursor = expdb.rawQuery("SELECT SUM(" + CeledgerContract.IncomeEntry.COL_5 + ") as Total FROM " + CeledgerContract.IncomeEntry.INCOME_TABLE, null);
         if (icursor.moveToFirst()) {
             iTotal = icursor.getFloat(icursor.getColumnIndex("Total"));// get final total
         }
-        icursor.close();
+        //icursor.close();
         IncomeAmount.setText(String.valueOf(iTotal));
-
         //Latest Income List
         Incmelist.setLayoutManager(new LinearLayoutManager(this));
         icAdaptor = new IncmeAdaptor(this, getAllIncome());
@@ -70,19 +68,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(startIntentxpnd);
             }
         });
-
+        //Show Total Expense
         Cursor ecursor = expdb.rawQuery("SELECT SUM(" + CeledgerContract.XpenseEntry.AMOUNT + ") as Total FROM " + CeledgerContract.XpenseEntry.XPENSE_TABLE, null);
         if (ecursor.moveToFirst()) {
             xTotal = ecursor.getFloat(ecursor.getColumnIndex("Total"));// get final total
         }
-        ecursor.close();
+        //ecursor.close();
         ExpenseAmount.setText(String.valueOf(xTotal));
-
         //Latest Expense List
         Xpnselist.setLayoutManager(new LinearLayoutManager(this));
         xpAdaptor = new XpnseAdaptor(this, getAllXpense());
         Xpnselist.setAdapter(xpAdaptor);
 
+        //Add Expense button
         addXpense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Show Savings
         sTotal = iTotal - xTotal;
         SavingAmount.setText(String.valueOf(sTotal));
     }

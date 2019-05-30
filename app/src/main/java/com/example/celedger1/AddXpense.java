@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
@@ -39,6 +40,7 @@ public class AddXpense extends AppCompatActivity {
         setContentView(R.layout.activity_add_xpense);
 
         Button addincme = findViewById(R.id.incmeimg);
+        ImageView Home = findViewById(R.id.goHome);
 
         xpense_db = new DatabaseHelper(this);
         expdb = xpense_db.getWritableDatabase();
@@ -55,6 +57,13 @@ public class AddXpense extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntentaddincome = new Intent(getApplicationContext(),AddIncome.class);
                 startActivity(startIntentaddincome);
+            }
+        });
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntentmain = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(startIntentmain);
             }
         });
 
@@ -128,6 +137,9 @@ public class AddXpense extends AppCompatActivity {
                     Toast.makeText(AddXpense.this, "Data Inserted", Toast.LENGTH_LONG).show();
                 else
                     Toast.makeText(AddXpense.this, "Data Not Inserted", Toast.LENGTH_LONG).show();
+
+                Intent startIntentxpnd = new Intent(getApplicationContext(),ExpendActivity.class);
+                startActivity(startIntentxpnd);
             }
         });
     }
