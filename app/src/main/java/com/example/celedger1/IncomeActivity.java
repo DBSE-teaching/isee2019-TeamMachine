@@ -1,6 +1,5 @@
 package com.example.celedger1;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -35,8 +34,7 @@ public class IncomeActivity extends AppCompatActivity {
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntentmain = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(startIntentmain);
+                finish();
             }
         });
 
@@ -52,6 +50,7 @@ public class IncomeActivity extends AppCompatActivity {
         if (dcursor.moveToFirst()) {
             icTotal = dcursor.getFloat(dcursor.getColumnIndex("Total"));// get final total
             }
+        dcursor.close();
         Totalincome.setText(String.valueOf(icTotal));
     }
 

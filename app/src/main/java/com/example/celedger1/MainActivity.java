@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntentIncme = new Intent(getApplicationContext(), IncomeActivity.class);
                 startActivity(startIntentIncme);
+                recreate();
             }
         });
         //Show Total Income
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         if (icursor.moveToFirst()) {
             iTotal = icursor.getFloat(icursor.getColumnIndex("Total"));// get final total
         }
-        //icursor.close();
+        icursor.close();
         IncomeAmount.setText(String.valueOf(iTotal));
         //Latest Income List
         Incmelist.setLayoutManager(new LinearLayoutManager(this));
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntentxpnd = new Intent(getApplicationContext(),ExpendActivity.class);
                 startActivity(startIntentxpnd);
+                recreate();
             }
         });
         //Show Total Expense
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         if (ecursor.moveToFirst()) {
             xTotal = ecursor.getFloat(ecursor.getColumnIndex("Total"));// get final total
         }
-        //ecursor.close();
+        ecursor.close();
         ExpenseAmount.setText(String.valueOf(xTotal));
         //Latest Expense List
         Xpnselist.setLayoutManager(new LinearLayoutManager(this));
@@ -116,5 +118,10 @@ public class MainActivity extends AppCompatActivity {
                 CeledgerContract.IncomeEntry.COL_6 +" DESC",
                 limit);
         return cursor;
+    }
+
+    @Override
+    public void recreate() {
+        super.recreate();
     }
 }

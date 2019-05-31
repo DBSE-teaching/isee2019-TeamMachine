@@ -84,6 +84,7 @@
             android:layout_weight="0.5"/>
 
         //PLACE WHERE USER ADDS DATA
+
         <EditText
             android:id="@+id/expamt"
             android:layout_width="wrap_content"
@@ -92,13 +93,11 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="12dp"
-            android:ems="10"
+            android:layout_weight="0.5"
             android:hint="Add Amount"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:paddingLeft="60dp"
-            android:textColor="#756E6E"
-            android:textSize="12sp"
-            android:layout_weight="0.5"/>
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -130,15 +129,15 @@
             android:layout_weight="0.5"/>
 
         //PLACE WHERE USER ADDS DATA
+
         <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/expsrc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Select Catagory"
-            android:id="@+id/expsrc"
-            android:textColor="#756E6E"
-            android:textSize="12sp"
+            android:layout_marginEnd="12dp"
             android:layout_weight="1"
-            android:layout_marginEnd="12dp"/>
+            android:hint="Select Catagory"
+            android:textSize="12sp" />
     </LinearLayout>
 
     //PAYMENT METHOD
@@ -161,15 +160,15 @@
             android:layout_weight="0.5"/>
 
         //PLACE WHERE USER ADDS DATA
+
         <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/exppm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Select Payment Option"
-            android:id="@+id/exppm"
-            android:textColor="#756E6E"
-            android:textSize="12sp"
+            android:layout_marginEnd="12dp"
             android:layout_weight="1"
-            android:layout_marginEnd="12dp"/>
+            android:hint="Select Payment Option"
+            android:textSize="12sp" />
     </LinearLayout>
 
     //DATE
@@ -192,15 +191,15 @@
             android:layout_weight="0.5"/>
 
         //PLACE WHERE USER ADDS DATA
+
         <EditText
+            android:id="@+id/expdte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Date"
-            android:id="@+id/expdte"
-            android:textColor="#756E6E"
-            android:textSize="12sp"
+            android:layout_marginEnd="16dp"
             android:layout_weight="0.5"
-            android:layout_marginEnd="16dp"/>
+            android:hint="Enter Date"
+            android:textSize="12sp" />
     </LinearLayout>
 
     //BUTTON TO ADD DATA TO DATABASE

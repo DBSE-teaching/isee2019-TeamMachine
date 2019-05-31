@@ -55,13 +55,13 @@ public class AddXpense extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntentaddincome = new Intent(getApplicationContext(),AddIncome.class);
                 startActivity(startIntentaddincome);
+                finish();
             }
         });
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntentmain = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(startIntentmain);
+                finish();
             }
         });
 
@@ -138,6 +138,7 @@ public class AddXpense extends AppCompatActivity {
 
                 Intent startIntentxpnd = new Intent(getApplicationContext(),ExpendActivity.class);
                 startActivity(startIntentxpnd);
+                finish();
             }
         });
     }
