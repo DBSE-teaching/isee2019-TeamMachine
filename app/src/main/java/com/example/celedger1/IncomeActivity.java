@@ -1,5 +1,6 @@
 package com.example.celedger1;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class IncomeActivity extends AppCompatActivity {
         RecyclerView IncmelistRCV = findViewById(R.id.IncmelistRCV);
         TextView Totalincome = findViewById(R.id.Totalincome);
         ImageView Home = findViewById(R.id.goHome);
+        ImageView IcCat = findViewById(R.id.incmefilter);
         income_db = new DatabaseHelper(this);
         incdb = income_db.getWritableDatabase();
 
@@ -44,6 +46,13 @@ public class IncomeActivity extends AppCompatActivity {
         IncmelistRCV.setAdapter(icAdaptor);
 
         //FILTER BY CATEGORIES
+        IcCat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent OpenicFilter = new Intent(getApplicationContext(),SortIncbyCat.class);
+                startActivity(OpenicFilter);
+            }
+        });
 
         //SHOW TOTAL INCOME
         Cursor dcursor = incdb.rawQuery("SELECT SUM(" + CeledgerContract.IncomeEntry.COL_5 + ") as Total FROM " + CeledgerContract.IncomeEntry.INCOME_TABLE, null);

@@ -1,5 +1,6 @@
 package com.example.celedger1;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -45,6 +46,13 @@ public class ExpendActivity extends AppCompatActivity {
         ExpenselistRCV.setAdapter(xpAdaptor);
 
         //FILTER BY CATEGORIES
+        XpCat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent OpenxpFilter = new Intent(getApplicationContext(), SortExpbyCat.class);
+                startActivity(OpenxpFilter);
+            }
+        });
 
         //SHOW TOTAL EXPENSE
         Cursor dcursor = expdb.rawQuery("SELECT SUM(" + CeledgerContract.XpenseEntry.AMOUNT + ") as Total FROM " + CeledgerContract.XpenseEntry.XPENSE_TABLE, null);
