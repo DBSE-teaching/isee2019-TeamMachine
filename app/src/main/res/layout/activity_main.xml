@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
-    //CHANGE THE CONSTRAINT LAYOUT TO RELATIVE LAYOUT
 
     //TOOLBAR
     <LinearLayout
@@ -60,13 +59,22 @@
             android:id="@+id/incomeamt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.4"
-            android:gravity="right"
-            android:paddingRight="56dp"
-            android:text="0.00 €"
+            android:layout_weight="0.5"
+            android:textAlignment="textEnd"
+            android:text="0.00  "
             android:textStyle="bold"
             android:textColor="#07C414"
             android:textSize="10sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="56dp"
+            android:text="  €"
+            android:textStyle="bold"
+            android:textColor="#07C414"
+            android:textSize="10sp" />
+
     </LinearLayout>
 
     //3 LATEST ENTRIES OF INCOME
@@ -87,7 +95,7 @@
         android:layout_marginTop="10dp"
         android:background="#BCBEBE"
         android:elevation="5dp"
-        android:padding="4dp">
+        android:padding="8dp">
 
         EXPENSE TEXT
         <TextView
@@ -106,10 +114,18 @@
             android:id="@+id/expendamt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.4"
+            android:layout_weight="0.5"
+            android:text="0.00  "
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
+            android:textColor="#FA0505"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="right"
             android:paddingRight="56dp"
-            android:text="0.00 €"
+            android:text="  €"
             android:textStyle="bold"
             android:textColor="#FA0505"
             android:textSize="10sp" />
