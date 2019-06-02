@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_sort_black_24dp"/>
+            android:src="@drawable/ic_filter_list_white_24dp"/>
     </LinearLayout>
 
     //RECYCLER VIEW OF INCOME LIST FOR SCROLLABLE CONTENT

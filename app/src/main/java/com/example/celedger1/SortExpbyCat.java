@@ -12,9 +12,9 @@ public class SortExpbyCat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sort_expby_cat);
 
-        ImageView Home = findViewById(R.id.goHome);
+        ImageView Back = findViewById(R.id.goBack);
 
-        Home.setOnClickListener(new View.OnClickListener() {
+        Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
