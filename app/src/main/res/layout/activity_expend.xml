@@ -52,6 +52,7 @@
         android:layout_below="@+id/expendtoolbar">
     </android.support.v7.widget.RecyclerView>
 
+    //TOTAL EXPENSE
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"

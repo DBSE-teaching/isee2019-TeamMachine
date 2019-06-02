@@ -15,6 +15,7 @@ import android.widget.TextView;
 //CLASS FOR MAIN ACTIVITY
 public class MainActivity extends AppCompatActivity {
 
+    //DECLARATIONS
     String limit = "3";
     float xTotal, iTotal, sTotal;
     DatabaseHelper xpense_db;

@@ -24,7 +24,6 @@ public class IncmeAdaptor extends RecyclerView.Adapter<IncmeAdaptor.IncmeViewHol
 
     public IncmeAdaptor(Context context, Cursor cursor)
     {
-        //this.data = data;
         icContext = context;
         icCursor = cursor;
     }
@@ -60,7 +59,6 @@ public class IncmeAdaptor extends RecyclerView.Adapter<IncmeAdaptor.IncmeViewHol
     //NUMBER OF ITEMS TO BE SHOWN IN THE VIEW
     @Override
     public int getItemCount() {
-        //return data.length;
         return icCursor.getCount();
     }
 

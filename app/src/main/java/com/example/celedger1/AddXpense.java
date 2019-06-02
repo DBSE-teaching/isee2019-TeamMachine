@@ -23,6 +23,7 @@ import java.util.Calendar;
 
 public class AddXpense extends AppCompatActivity {
 
+    //DECLARATIONS
     DatabaseHelper xpense_db;
     SQLiteDatabase expdb;
     EditText addexpamt, addexpdte;
@@ -95,6 +96,7 @@ public class AddXpense extends AppCompatActivity {
             }
         });
 
+        //TEXT CHANGE LISTENER
         addexpamt.addTextChangedListener(addxpensetextwatcher);
         addexpcat.addTextChangedListener(addxpensetextwatcher);
         addexpPM.addTextChangedListener(addxpensetextwatcher);

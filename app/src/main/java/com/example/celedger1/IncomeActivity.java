@@ -14,6 +14,7 @@ import android.widget.TextView;
 //CLASS FOR INCOME ACTIVITY
 public class IncomeActivity extends AppCompatActivity {
 
+    //DECLARATIONS
     DatabaseHelper income_db;
     SQLiteDatabase incdb;
     IncmeAdaptor icAdaptor;

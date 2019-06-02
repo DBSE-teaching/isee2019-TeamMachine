@@ -10,11 +10,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String CELEDGER_DB = "celedger_database.db";
 
-
     public DatabaseHelper(Context context) {
         super(context, CELEDGER_DB, null, 1);
     }
 
+    //CREATE DATABASE TABLE
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + IncomeEntry.INCOME_TABLE + " (" +
@@ -35,6 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ");");
     }
 
+    //UPGRADE TABLE
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + IncomeEntry.INCOME_TABLE);
@@ -42,6 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    //INSERT INCOME DATA
     public boolean insertincomedata(String source, String amount, String date, String paymentmethod){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -56,6 +58,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+    //INSERT EXPENSE DATA
     public boolean insertxpnsedata(String category, String amount, String date, String paymentmethod){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();

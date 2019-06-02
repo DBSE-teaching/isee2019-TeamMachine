@@ -70,6 +70,7 @@ public class XpnseAdaptor extends RecyclerView.Adapter<XpnseAdaptor.XpnseViewHol
         }
     }
 
+    //CREATE A VIEW
     public class XpnseViewHolder extends RecyclerView.ViewHolder{
         ImageView imgicon;
         TextView Xpnsetitle;

@@ -23,6 +23,7 @@ import java.util.Calendar;
 
 public class AddIncome extends AppCompatActivity {
 
+    //DECLARATIONS
     DatabaseHelper income_db;
     SQLiteDatabase incdb;
     EditText addincamt, addincdte;
@@ -94,6 +95,7 @@ public class AddIncome extends AppCompatActivity {
             }
         });
 
+        //TEXT CHANGE LISTENER
         addincamt.addTextChangedListener(addincometextwatcher);
         addinccat.addTextChangedListener(addincometextwatcher);
         addincPM.addTextChangedListener(addincometextwatcher);

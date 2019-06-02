@@ -14,6 +14,7 @@ import android.widget.TextView;
 //CLASS FOR EXPEND ACTIVITY
 public class ExpendActivity extends AppCompatActivity {
 
+    //DECLARATIONS
     DatabaseHelper xpense_db;
     SQLiteDatabase expdb;
     XpnseAdaptor xpAdaptor;
