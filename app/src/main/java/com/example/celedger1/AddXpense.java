@@ -38,12 +38,11 @@ public class AddXpense extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_xpense);
 
+        //DECLARATION AND DEFINITION
         Button addincme = findViewById(R.id.incmeimg);
         ImageView Home = findViewById(R.id.goHome);
-
         xpense_db = new DatabaseHelper(this);
         expdb = xpense_db.getWritableDatabase();
-
         addexpamt = findViewById(R.id.expamt);
         addexpcat = findViewById(R.id.expsrc);
         addexpPM = findViewById(R.id.exppm);

@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         //Show Total Income
         Cursor icursor = expdb.rawQuery("SELECT SUM(" + CeledgerContract.IncomeEntry.COL_5 + ") as Total FROM " + CeledgerContract.IncomeEntry.INCOME_TABLE, null);
         if (icursor.moveToFirst()) {
-            iTotal = icursor.getFloat(icursor.getColumnIndex("Total"));// get final total
+            iTotal = icursor.getFloat(icursor.getColumnIndex("Total"));             // get final total
         }
         icursor.close();
         IncomeAmount.setText(String.valueOf(iTotal));

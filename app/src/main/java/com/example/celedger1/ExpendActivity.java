@@ -46,7 +46,7 @@ public class ExpendActivity extends AppCompatActivity {
         xpAdaptor = new XpnseAdaptor(this, getAllXpense());
         ExpenselistRCV.setAdapter(xpAdaptor);
 
-        //FILTER BY CATEGORIES
+        //GOTO FILTER BY CATEGORIES
         XpCat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
