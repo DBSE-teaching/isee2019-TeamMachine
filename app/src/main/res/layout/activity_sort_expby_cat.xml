@@ -56,11 +56,13 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Food"/>
+                android:text="Food"
+                android:id="@+id/food"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Travel"/>
+                android:text="Travel"
+                android:id="@+id/travel"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -115,5 +117,14 @@
         </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:text="APLLY FILTER"
+        android:textColor="#FFFF"
+        android:background="@color/colorAccent"/>
 
 </RelativeLayout>
