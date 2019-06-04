@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "ISEE 2019 -- Initial Blog Post"
+img: himalayan.jpg # Add image post (optional)
 date: 2018904-12
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+tag: []
 ---
-
 It's done! The initial Blog post of the ISEE lecture in summer term 2019 -- powered by [Jekyll](http://jekyllrb.com).
 Note that you can easily use Markdown to author your posts. This should make your life much more easier---Wooohooo!
 
