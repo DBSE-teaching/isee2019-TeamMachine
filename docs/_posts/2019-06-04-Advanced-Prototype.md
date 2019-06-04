@@ -76,7 +76,7 @@ The following is the link for the advanced working prototype of our Celedger app
 
 Homepage with Recent Activities
 
-![Homepage]({{site.baseurl}}/images/Homepage.jpg "Homepage"){:height="20%" width="35%"}
+![Homepage]({{site.baseurl}}/images/Homepage.jpg "Homepage"){:height="16%" width="28%"}
 
 Adding Income/Expense
 
@@ -88,4 +88,4 @@ Predefined Categories
 
 Filters
 
-![Filters]({{site.baseurl}}/images/Filters.jpg "Filters"){:height="20%" width="35%"}
+![Filters]({{site.baseurl}}/images/Filters.jpg "Filters"){:height="16%" width="28%"}
