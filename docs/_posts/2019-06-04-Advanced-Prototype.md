@@ -70,5 +70,7 @@ We worked in way where we don't get such unexpected user input that could ruin t
 
 ## Working Prototype
 
+The following is the link for the advanced working prototype of our Celedger application. We will provide you with the complete celedeger application in the next blog.
+
 <a href="https://github.com/DBSE-teaching/isee2019-TeamMachine/blob/CeledgerAppAPK/docs/Celedger2.apk" target="_blank"><b>Click here to download Apk</b></a>
 
