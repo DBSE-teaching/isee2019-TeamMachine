@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "Advanced Prototype"
+img: himalayan.jpg # Add image post (optional)
 date: 2019-06-04
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+tag: []
 ---
-
 **Welcome Back**
 
 In this blog we will see the various stages of Implementation and User Interface Design of our Celedger Application.
