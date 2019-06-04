@@ -50,9 +50,25 @@ Controller: It is the glue between the above two. It updates the view, takes use
 
 We created personas from two major user groups for our celedger application to identify their needs and expectations. They will define the main functions of our application. For this personas we have gathered their age, profession, personality, goals, frustations and their bio.
 
-![UP]({{site.baseurl}}/images/UP.png "UP"){:height="40%" width="70%"}
+![UP]({{site.baseurl}}/images/UP.png "UP"){:height="44%" width="77%"}
 
-![UP2]({{site.baseurl}}/images/UP2.png "UP2"){:height="40%" width="70%"}
+![UP2]({{site.baseurl}}/images/UP2.png "UP2"){:height="44%" width="77%"}
 
 ## Design Solution
+
+We created a prototype from the above user group stories. We provided the numeric keyboard for the app considering it as a major requirement for the user. And we did the application in such a way that he/she can only see recent activities or entries in the homepage as it is one of the user requirement we have gathered.
+
+![DS1]({{site.baseurl}}/images/DS1.jpg "DS1"){:height="35%" width="60%"}
+
+![DS2]({{site.baseurl}}/images/DS2.jpg "DS2"){:height="35%" width="60%"}
+
+## Summary of Changes
+
+We only made few changes to our application comparing to the initial design. Before we had addition button for both income and expenses seperately but later we have changed it into a common button based on the user requirements.
+
+We worked in way where we don't get such unexpected user input that could ruin the whole user interface of our application.
+
+## Working Prototype
+
+<a href="https://github.com/DBSE-teaching/isee2019-TeamMachine/blob/CeledgerAppAPK/docs/Celedger2.apk" target="_blank"><b>Click here to download Apk</b></a>
 
