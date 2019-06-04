@@ -22,16 +22,16 @@ And for the ease access of coding we gave spaces in between each sections. And w
 
 The Design pattern of any android application is broadly classified into three categories
 
-![DP]({{site.baseurl}}/images/DP.jpg "DP"){:height="20%" width="35%"}
+![DP]({{site.baseurl}}/images/DP.jpg "DP"){:height="40%" width="70%"}
 
-1.	Creational pattern
+Creational Pattern
 
 This pattern describes how an object of a class is created. We are using Singleton pattern here. The ViewHolder used to view the incomes & expenses in a list view is an example of the singleton design pattern. It's used to improve performance of a ListView while scrolling it.
 
-2.	Structural pattern
+Structural Pattern
 
 It specifies how the classes and objects are arranged in an arrangement that performs a particular task. We are using Adapter to do the same for us. In order to implement the RecyclerView onto a layout an Adapter is used.
 
-3.	Behavioural pattern
+Behavioural Pattern
 
 It refers to three divisions of classes used.
