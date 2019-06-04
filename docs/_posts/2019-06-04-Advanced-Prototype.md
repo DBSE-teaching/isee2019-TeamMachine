@@ -8,16 +8,6 @@ date: 2019-06-04
 
 In this blog we will see the various stages of Implementation and User Interface Design of our Celedger Application.
 
-## Coding Conventions
-
-There are few coding guidelines we came up with as a team to improve ease of understanding of the coding part. Coming to java file names, for the activities and classes we have used .java and for the layouts we have used .xml. We have packages, import statements, overrides of methods etc; in our source file structure. The miscellaneous we used are the drawable and colored strings. The variables are first declared then they are defined and then they are used in the coding.
-
-And for the ease access of coding we gave spaces in between each sections. And we also gave comments for different sections to provide information or explanation about the variable, method, class or any statement.
-
-![CC1]({{site.baseurl}}/images/CC1.png "CC1"){:height="35%" width="60%"}
-
-![CC2]({{site.baseurl}}/images/CC2.png "CC2"){:height="35%" width="60%"}
-
 ## Design Patterns
 
 The Design pattern of any android application is broadly classified into three categories
@@ -45,6 +35,16 @@ Controller: It is the glue between the above two. It updates the view, takes use
 ![DP1]({{site.baseurl}}/images/DP1.jpg "DP1"){:height="35%" width="60%"}
 
 ![DP2]({{site.baseurl}}/images/DP2.jpg "DP2"){:height="35%" width="60%"}
+
+## Coding Conventions
+
+There are few coding guidelines we came up with as a team to improve ease of understanding of the coding part. Coming to java file names, for the activities and classes we have used .java and for the layouts we have used .xml. We have packages, import statements, overrides of methods etc; in our source file structure. The miscellaneous we used are the drawable and colored strings. The variables are first declared then they are defined and then they are used in the coding.
+
+And for the ease access of coding we gave spaces in between each sections. And we also gave comments for different sections to provide information or explanation about the variable, method, class or any statement.
+
+![CC1]({{site.baseurl}}/images/CC1.png "CC1"){:height="35%" width="60%"}
+
+![CC2]({{site.baseurl}}/images/CC2.png "CC2"){:height="35%" width="60%"}
 
 ## Context of use
 
