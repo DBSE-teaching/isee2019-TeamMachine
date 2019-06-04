@@ -42,4 +42,17 @@ View: It is the visual class, which includes everything the user sees.
 
 Controller: It is the glue between the above two. It updates the view, takes user input and make changes to the model.
 
-![DP1]({{site.baseurl}}/images/DP1.jpg "DP1"){:height="35%" width="60%"}![DP2]({{site.baseurl}}/images/DP2.jpg "DP2"){:height="35%" width="60%"}
+![DP1]({{site.baseurl}}/images/DP1.jpg "DP1"){:height="35%" width="60%"}
+
+![DP2]({{site.baseurl}}/images/DP2.jpg "DP2"){:height="35%" width="60%"}
+
+## Context of use
+
+We created personas from two major user groups for our celedger application to identify their needs and expectations. They will define the main functions of our application. For this personas we have gathered their age, profession, personality, goals, frustations and their bio.
+
+![UP]({{site.baseurl}}/images/UP.png "UP"){:height="40%" width="70%"}
+
+![UP2]({{site.baseurl}}/images/UP2.png "UP2"){:height="40%" width="70%"}
+
+## Design Solution
+
