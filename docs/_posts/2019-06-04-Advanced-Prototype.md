@@ -74,3 +74,18 @@ The following is the link for the advanced working prototype of our Celedger app
 
 <a href="https://github.com/DBSE-teaching/isee2019-TeamMachine/blob/CeledgerAppAPK/docs/Celedger2.apk" target="_blank"><b>Click here to download Apk</b></a>
 
+Homepage with Recent Activities
+
+![Homepage]({{site.baseurl}}/images/Homepage.jpg "Homepage"){:height="40%" width="70%"}
+
+Adding Income/Expense
+
+![MP]({{site.baseurl}}/images/MP.png "MP"){:height="40%" width="70%"}
+
+Predefined Categories
+
+![PD]({{site.baseurl}}/images/PD.png "PD"){:height="40%" width="70%"}
+
+Filters
+
+![Filters]({{site.baseurl}}/images/Filters.jpg "Filters"){:height="40%" width="70%"}
