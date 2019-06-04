@@ -58,9 +58,9 @@ We created personas from two major user groups for our celedger application to i
 
 We created a prototype from the above user group stories. We provided the numeric keyboard for the app considering it as a major requirement for the user. And we did the application in such a way that he/she can only see recent activities or entries in the homepage as it is one of the user requirement we have gathered.
 
-![DS1]({{site.baseurl}}/images/DS1.jpg "DS1"){:height="35%" width="60%"}
+![DS1]({{site.baseurl}}/images/DS1.jpg "DS1"){:height="42%" width="72%"}
 
-![DS2]({{site.baseurl}}/images/DS2.jpg "DS2"){:height="35%" width="60%"}
+![DS2]({{site.baseurl}}/images/DS2.jpg "DS2"){:height="42%" width="72%"}
 
 ## Summary of Changes
 
