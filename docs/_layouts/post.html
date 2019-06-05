@@ -7,11 +7,11 @@ layout: default
   <article class="post">
     <header>
       <div class="post_image">
-        <img src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{TeamMachine}}">
+        <img src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
       </div>
       <div class="post_description">
         <p class="post_meta">{{page.date | date: '%Y, %b %d'}}</p>
-        <h1 class="post_title">{{TeamMachine}}</h1>
+        <h1 class="post_title">{{page.title}}</h1>
       </div>
     </header> <!-- End Header -->
 
