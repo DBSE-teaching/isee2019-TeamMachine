@@ -57,32 +57,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Food"
-                android:id="@+id/food"/>
+                android:id="@+id/check_food"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Travel"
-                android:id="@+id/travel"/>
+                android:id="@+id/check_travel"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fees"/>
+                android:text="Fees"
+                android:id="@+id/check_fees"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bills"/>
+                android:text="Bills"
+                android:id="@+id/check_bills"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rent"/>
+                android:text="Rent"
+                android:id="@+id/check_rent"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Shopping"/>
+                android:text="Shopping"
+                android:id="@+id/check_shopping"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Others"/>
+                android:text="Others"
+                android:id="@+id/check_others"/>
         </LinearLayout>
         </LinearLayout>
 
@@ -121,6 +126,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/expAF"
         android:layout_alignParentBottom="true"
         android:layout_weight="1"
         android:text="APLLY FILTER"

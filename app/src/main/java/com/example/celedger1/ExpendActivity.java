@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 //CLASS FOR EXPEND ACTIVITY
 public class ExpendActivity extends AppCompatActivity {
@@ -19,6 +22,9 @@ public class ExpendActivity extends AppCompatActivity {
     SQLiteDatabase expdb;
     XpnseAdaptor xpAdaptor;
     float xpTotal;
+    ArrayList<String> POE;
+    private static Integer state = 0;
+    public static String TAG = ExpendActivity.class.getSimpleName();
 
     //CREATE LAYOUT
     @Override
@@ -52,6 +58,8 @@ public class ExpendActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent OpenxpFilter = new Intent(getApplicationContext(), SortExpbyCat.class);
                 startActivity(OpenxpFilter);
+                state++;
+                finish();
             }
         });
 
@@ -63,6 +71,12 @@ public class ExpendActivity extends AppCompatActivity {
         dcursor.close();
         Totalxpense.setText(String.valueOf(xpTotal));
 
+        POE = SortExpbyCat.ExpCat;
+        Log.d(TAG, "POE: " + POE);
+        if(state!=0) {
+            int x = SortExpbyCat.Sizeof;
+            Log.d(TAG, "Size of POE: " + x);
+        }
     }
 
     private Cursor getAllXpense(){
