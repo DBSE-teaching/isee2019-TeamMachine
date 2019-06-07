@@ -56,14 +56,17 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/check_salary"
                     android:text="Salary"/>
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/check_payment"
                     android:text="Payment"/>
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/check_iothers"
                     android:text="Others"/>
             </LinearLayout>
         </LinearLayout>
@@ -100,6 +103,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:id="@+id/incAF"
         android:layout_weight="1"
         android:text="APLLY FILTER"
         android:textColor="#FFFF"
