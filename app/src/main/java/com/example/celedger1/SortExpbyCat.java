@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public class SortExpbyCat extends AppCompatActivity {
     //DECLARATION
-    CheckBox check_food, check_travel, check_fees, check_bills, check_rent, check_shopping, check_others;
-    public static ArrayList<String> ExpCat;
-    public static Integer Sizeof;
+    CheckBox check_food, check_travel, check_fees, check_bills, check_rent, check_shopping, check_others, check_xpCash, check_xpCard, check_xpOT;
+    public static ArrayList<String> ExpCat, ExpPM;
+    public static Integer Sizeof, pmsize;
     Button Applyfilter;
 
     @Override
@@ -25,6 +25,7 @@ public class SortExpbyCat extends AppCompatActivity {
         //DECLARATION & DEFINITION
         ImageView Back = findViewById(R.id.goBack);
         ExpCat = new ArrayList<>();
+        ExpPM = new ArrayList<>();
         Applyfilter = findViewById(R.id.expAF);
         check_bills = findViewById(R.id.check_bills);
         check_fees = findViewById(R.id.check_fees);
@@ -33,6 +34,9 @@ public class SortExpbyCat extends AppCompatActivity {
         check_rent = findViewById(R.id.check_rent);
         check_shopping = findViewById(R.id.check_shopping);
         check_travel = findViewById(R.id.check_travel);
+        check_xpCash = findViewById(R.id.check_xpCash);
+        check_xpCard = findViewById(R.id.check_xpCard);
+        check_xpOT = findViewById(R.id.check_xpOT);
 
         //GO BACK
         Back.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +45,9 @@ public class SortExpbyCat extends AppCompatActivity {
                 Intent ExpAct = new Intent(getApplicationContext(), ExpendActivity.class);
                 startActivity(ExpAct);
                 ExpCat.clear();
+                ExpPM.clear();
                 Sizeof=0;
+                pmsize=0;
                 finish();
             }
         });
@@ -124,6 +130,40 @@ public class SortExpbyCat extends AppCompatActivity {
             }
         });
 
+        //CHECKBOX CASH
+        check_xpCash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(check_xpCash.isChecked()){
+                    ExpPM.add("Cash");
+                }
+                else
+                    ExpPM.remove("Cash");
+            }
+        });
+        //CHECKBOX CARD
+        check_xpCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(check_xpCard.isChecked()){
+                    ExpPM.add("Card");
+                }
+                else
+                    ExpPM.remove("Card");
+            }
+        });
+        //CHECKBOX ONLINE TRANSFER
+        check_xpOT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(check_xpOT.isChecked()){
+                    ExpPM.add("Online Transfer");
+                }
+                else
+                    ExpPM.remove("Online Transfer");
+            }
+        });
+
         //APPLY FILTER
         Applyfilter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,6 +171,7 @@ public class SortExpbyCat extends AppCompatActivity {
                 Intent ExpAct = new Intent(getApplicationContext(), ExpendActivity.class);
                 startActivity(ExpAct);
                 Sizeof = ExpCat.size();
+                pmsize = ExpPM.size();
                 finish();
             }
         });
@@ -141,7 +182,9 @@ public class SortExpbyCat extends AppCompatActivity {
         Intent ExpAct = new Intent(getApplicationContext(), ExpendActivity.class);
         startActivity(ExpAct);
         ExpCat.clear();
+        ExpPM.clear();
         Sizeof=0;
+        pmsize=0;
         super.onBackPressed();
     }
 }

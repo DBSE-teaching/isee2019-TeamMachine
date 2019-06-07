@@ -37,6 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/sortincometoolbar"
         android:layout_marginTop="10dp">
+
+        //SOURCE OF INCOME
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -71,6 +73,7 @@
             </LinearLayout>
         </LinearLayout>
 
+        //PAYMENT METHOD
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -90,15 +93,18 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/check_icCash"
                     android:text="Cash"/>
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/check_icOT"
                     android:text="Online Transfer"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
+    //APPLY FILTER
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

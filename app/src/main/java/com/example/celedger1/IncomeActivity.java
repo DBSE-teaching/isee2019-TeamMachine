@@ -22,9 +22,9 @@ public class IncomeActivity extends AppCompatActivity {
     SQLiteDatabase incdb;
     IncmeAdaptor icAdaptor;
     float icTotal;
-    int Sosoi;
-    String rq1,rq2, rq3, rq;
-    ArrayList<String> SOI;
+    int Sosoi, Soipm;
+    String rq1,rq2, rq3, rq4, rq5, rq6, rq, rqsoi, rqipm;
+    ArrayList<String> SOI, iPM;
     private static Integer state = 0;
     public static String TAG = IncomeActivity.class.getSimpleName();
 
@@ -42,14 +42,20 @@ public class IncomeActivity extends AppCompatActivity {
         income_db = new DatabaseHelper(this);
         incdb = income_db.getWritableDatabase();
 
+        //GO HOME
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(SOI != null) {
                     SOI.clear();
                 }
+                if(iPM != null){
+                    iPM.clear();
+                }
                 Sosoi = 0;
+                Soipm = 0;
                 SortIncbyCat.Sizeof = 0;
+                SortIncbyCat.pmsize = 0;
                 Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(MainIntent);
                 finish();
@@ -58,15 +64,20 @@ public class IncomeActivity extends AppCompatActivity {
 
         //FIND NUMBER OF FILTERS
         SOI = SortIncbyCat.IncCat;
+        iPM = SortIncbyCat.IncPM;
         Log.d(TAG, "SOI: " + SOI);
+        Log.d(TAG, "Inc PayMethod: " + iPM);
         if(state!=0) {
             Sosoi = SortIncbyCat.Sizeof;
+            Soipm = SortIncbyCat.pmsize;
             Log.d(TAG, "Size of SOI: " + Sosoi);
+            Log.d(TAG, "Size of Inc PayMethod: " + Soipm);
         }
 
         //CREATE A QUERY TO FILTER DATABASE
         StringBuilder sb = new StringBuilder();
-        if(Sosoi!=0) {
+        //Filter by source of Income
+        if(Sosoi !=0 && Soipm == 0) {
             if (Sosoi > 1) {
                 rq1 = CeledgerContract.IncomeEntry.COL_4 + " = ('" + SOI.get(0) + "')";
                 Log.d(TAG, "rq1: " + rq1 + "\n");
@@ -82,13 +93,65 @@ public class IncomeActivity extends AppCompatActivity {
                 rq = CeledgerContract.IncomeEntry.COL_4 + " = ('" + SOI.get(0) + "')";
             }
         }
+        //Filter by Payment Method
+        if(Soipm !=0 && Sosoi == 0) {
+            if (Soipm > 1) {
+                rq1 = CeledgerContract.IncomeEntry.COL_3 + " = ('" + iPM.get(0) + "')";
+                Log.d(TAG, "rq1: " + rq1 + "\n");
+                for (int i = 1; i < Soipm; i++) {
+                    rq2 = " OR " + CeledgerContract.IncomeEntry.COL_3 + " = ('" + iPM.get(i) + "')";
+                    rq3 = sb.append(rq2).toString();
+                    Log.d(TAG, "rq2: " + rq2 + "\n");
+                    Log.d(TAG, "rq3: " + rq3 + "\n");
+                }
+                rq = rq1 + rq3;
+            }
+            else if(Soipm == 1){
+                rq = CeledgerContract.IncomeEntry.COL_3 + " = ('" + iPM.get(0) + "')";
+            }
+        }
+        //Filter by both source of Income & payment method
+        if(Sosoi !=0 && Soipm !=0){
+            //make query for source of Income
+            if (Sosoi > 1) {
+                rq1 = CeledgerContract.IncomeEntry.COL_4 + " = ('" + SOI.get(0) + "')";
+                Log.d(TAG, "rq1: " + rq1 + "\n");
+                for (int i = 1; i < Sosoi; i++) {
+                    rq2 = " OR " + CeledgerContract.IncomeEntry.COL_4 + " = ('" + SOI.get(i) + "')";
+                    rq3 = sb.append(rq2).toString();
+                    Log.d(TAG, "rq2: " + rq2 + "\n");
+                    Log.d(TAG, "rq3: " + rq3 + "\n");
+                }
+                rqsoi = rq1 + rq3;
+            }
+            else if(Sosoi == 1){
+                rqsoi = CeledgerContract.IncomeEntry.COL_4 + " = ('" + SOI.get(0) + "')";
+            }
+            //make query for payment method
+            if (Soipm > 1) {
+                rq4 = CeledgerContract.IncomeEntry.COL_3 + " = ('" + iPM.get(0) + "')";
+                Log.d(TAG, "rq4: " + rq4 + "\n");
+                for (int i = 1; i < Soipm; i++) {
+                    rq5 = " OR " + CeledgerContract.IncomeEntry.COL_3 + " = ('" + iPM.get(i) + "')";
+                    rq6 = sb.append(rq5).toString();
+                    Log.d(TAG, "rq5: " + rq5 + "\n");
+                    Log.d(TAG, "rq6: " + rq6 + "\n");
+                }
+                rqipm = rq4 + rq6;
+            }
+            else if(Soipm == 1){
+                rqipm = CeledgerContract.IncomeEntry.COL_3 + " = ('" + iPM.get(0) + "')";
+            }
+            rq = "(" + rqsoi + ") AND " + "(" + rqipm + ")";
+        }
+
         Log.d(TAG, "query: " + rq);
 
         //SHOWS SCROLLABLE INCOME LIST
-        if(Sosoi == 0) {
-        IncmelistRCV.setLayoutManager(new LinearLayoutManager(this));
-        icAdaptor = new IncmeAdaptor(this, getAllIncome());
-        IncmelistRCV.setAdapter(icAdaptor);
+        if(Sosoi == 0 && Soipm == 0) {
+            IncmelistRCV.setLayoutManager(new LinearLayoutManager(this));
+            icAdaptor = new IncmeAdaptor(this, getAllIncome());
+            IncmelistRCV.setAdapter(icAdaptor);
         }
         else {
             IncmelistRCV.setLayoutManager(new LinearLayoutManager(this));
@@ -109,12 +172,12 @@ public class IncomeActivity extends AppCompatActivity {
 
         //SHOW TOTAL INCOME
         if(Sosoi == 0) {
-        Cursor dcursor = incdb.rawQuery("SELECT SUM(" + CeledgerContract.IncomeEntry.COL_5 + ") as Total FROM " + CeledgerContract.IncomeEntry.INCOME_TABLE, null);
-        if (dcursor.moveToFirst()) {
-            icTotal = dcursor.getFloat(dcursor.getColumnIndex("Total"));// get final total
+            Cursor dcursor = incdb.rawQuery("SELECT SUM(" + CeledgerContract.IncomeEntry.COL_5 + ") as Total FROM " + CeledgerContract.IncomeEntry.INCOME_TABLE, null);
+            if (dcursor.moveToFirst()) {
+                icTotal = dcursor.getFloat(dcursor.getColumnIndex("Total"));// get final total
             }
-        dcursor.close();
-        Totalincome.setText(String.valueOf(icTotal));
+            dcursor.close();
+            Totalincome.setText(String.valueOf(icTotal));
         }
         else {
             Cursor dcursor = incdb.rawQuery("SELECT SUM(" + CeledgerContract.IncomeEntry.COL_5 + ") as Total FROM " + CeledgerContract.IncomeEntry.INCOME_TABLE + " WHERE " + rq, null);
@@ -152,7 +215,7 @@ public class IncomeActivity extends AppCompatActivity {
     }
 
     private Cursor getFilteredIncme(){
-        Cursor cursor = incdb.rawQuery("SELECT * FROM " + CeledgerContract.IncomeEntry.INCOME_TABLE + " WHERE " + rq, null);
+        Cursor cursor = incdb.rawQuery("SELECT * FROM " + CeledgerContract.IncomeEntry.INCOME_TABLE + " WHERE " + rq + " ORDER BY " + CeledgerContract.IncomeEntry.COL_6 + " DESC", null);
         return cursor;
     }
 }

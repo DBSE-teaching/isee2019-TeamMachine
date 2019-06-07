@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public class SortIncbyCat extends AppCompatActivity {
     //DECLARATION
-    CheckBox check_salary, check_payment, check_others;
-    public static ArrayList<String> IncCat;
-    public static Integer Sizeof;
+    CheckBox check_salary, check_payment, check_others, check_icCash, check_icOT;
+    public static ArrayList<String> IncCat, IncPM;
+    public static Integer Sizeof, pmsize;
     Button Applyfilter;
 
     @Override
@@ -25,10 +25,13 @@ public class SortIncbyCat extends AppCompatActivity {
         //DECLARATION & DEFINITION
         ImageView Back = findViewById(R.id.goBack);
         IncCat = new ArrayList<>();
+        IncPM = new ArrayList<>();
         Applyfilter = findViewById(R.id.incAF);
         check_salary = findViewById(R.id.check_salary);
         check_payment = findViewById(R.id.check_payment);
         check_others = findViewById(R.id.check_iothers);
+        check_icCash = findViewById(R.id.check_icCash);
+        check_icOT = findViewById(R.id.check_icOT);
 
         //GO BACK
         Back.setOnClickListener(new View.OnClickListener() {
@@ -37,12 +40,14 @@ public class SortIncbyCat extends AppCompatActivity {
                 Intent IncAct = new Intent(getApplicationContext(), IncomeActivity.class);
                 startActivity(IncAct);
                 IncCat.clear();
+                IncPM.clear();
                 Sizeof=0;
+                pmsize=0;
                 finish();
             }
         });
 
-        //CHECKBOX RENT
+        //CHECKBOX SALARY
         check_salary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +58,7 @@ public class SortIncbyCat extends AppCompatActivity {
                     IncCat.remove("Salary");
             }
         });
-        //CHECKBOX SHOPPING
+        //CHECKBOX PAYMENT
         check_payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +81,29 @@ public class SortIncbyCat extends AppCompatActivity {
             }
         });
 
+        //CHECKBOX CASH
+        check_icCash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(check_icCash.isChecked()){
+                    IncPM.add("Cash");
+                }
+                else
+                    IncPM.remove("Cash");
+            }
+        });
+        //CHECKBOX ONLINE TRANSFER
+        check_icOT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(check_icOT.isChecked()){
+                    IncPM.add("Online Transfer");
+                }
+                else
+                    IncPM.remove("Online Transfer");
+            }
+        });
+
         //APPLY FILTER
         Applyfilter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +111,7 @@ public class SortIncbyCat extends AppCompatActivity {
                 Intent IncAct = new Intent(getApplicationContext(), IncomeActivity.class);
                 startActivity(IncAct);
                 Sizeof = IncCat.size();
+                pmsize = IncPM.size();
                 finish();
             }
         });
@@ -93,7 +122,9 @@ public class SortIncbyCat extends AppCompatActivity {
         Intent IncAct = new Intent(getApplicationContext(), IncomeActivity.class);
         startActivity(IncAct);
         IncCat.clear();
+        IncPM.clear();
         Sizeof=0;
+        pmsize=0;
         super.onBackPressed();
     }
 }
