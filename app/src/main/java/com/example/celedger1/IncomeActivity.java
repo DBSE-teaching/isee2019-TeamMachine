@@ -37,6 +37,8 @@ public class IncomeActivity extends AppCompatActivity {
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(MainIntent);
                 finish();
             }
         });
@@ -62,6 +64,13 @@ public class IncomeActivity extends AppCompatActivity {
             }
         dcursor.close();
         Totalincome.setText(String.valueOf(icTotal));
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(MainIntent);
+        super.onBackPressed();
     }
 
     private Cursor getAllIncome(){

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntentIncme = new Intent(getApplicationContext(), IncomeActivity.class);
                 startActivity(startIntentIncme);
-                recreate();
+                finish();
             }
         });
         //Show Total Income
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntentxpnd = new Intent(getApplicationContext(),ExpendActivity.class);
                 startActivity(startIntentxpnd);
-                recreate();
+                finish();
             }
         });
         //Show Total Expense
@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntentaddxpense = new Intent(getApplicationContext(),AddXpense.class);
                 startActivity(startIntentaddxpense);
+                finish();
             }
         });
 

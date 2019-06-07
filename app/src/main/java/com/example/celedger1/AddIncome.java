@@ -52,6 +52,8 @@ public class AddIncome extends AppCompatActivity {
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(MainIntent);
                 finish();
             }
         });
@@ -102,6 +104,13 @@ public class AddIncome extends AppCompatActivity {
         addincdte.addTextChangedListener(addincometextwatcher);
 
         AddInc();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(MainIntent);
+        super.onBackPressed();
     }
 
     private TextWatcher addincometextwatcher = new TextWatcher() {

@@ -61,6 +61,8 @@ public class AddXpense extends AppCompatActivity {
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(MainIntent);
                 finish();
             }
         });
@@ -102,6 +104,13 @@ public class AddXpense extends AppCompatActivity {
         addexpdte.addTextChangedListener(addxpensetextwatcher);
 
         AddExp();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(MainIntent);
+        super.onBackPressed();
     }
 
     private TextWatcher addxpensetextwatcher = new TextWatcher() {

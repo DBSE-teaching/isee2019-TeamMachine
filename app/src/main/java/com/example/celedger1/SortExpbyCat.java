@@ -135,4 +135,13 @@ public class SortExpbyCat extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent ExpAct = new Intent(getApplicationContext(), ExpendActivity.class);
+        startActivity(ExpAct);
+        ExpCat.clear();
+        Sizeof=0;
+        super.onBackPressed();
+    }
 }
