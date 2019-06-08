@@ -1,10 +1,13 @@
 ---
 layout: post
+current: post
+cover: 'assets/images/bus.jpg'
+navigation: true
 title: "System Design"
-img: himalayan.jpg # Add image post (optional)
 date: 2019-05-13
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-tag: []
+class: post-template
+subclass: 'post tag-fiction'
+author: Muralidhar Reddy
 ---
 
 **Welcome again!**
