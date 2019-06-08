@@ -12,7 +12,7 @@ baseurl: /isee2019-TeamMachine/
 title: TeamMachine
 description: isee2019 Team Blog
 cover: assets/images/blog-cover.jpg
-logo: images/Logo.jpg
+logo: images/Logo.jpg{:height="120%" width="120%"}
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
 production_url: https://jekyller.github.io/jasper2/
