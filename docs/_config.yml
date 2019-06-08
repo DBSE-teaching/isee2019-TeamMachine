@@ -10,8 +10,8 @@ baseurl: /isee2019-TeamMachine/
 
 # Website info
 title: TeamMachine
-description: Along with the lecture "Introduction to Software Engineering for Engineers", we will develop an app for Android OS on "Money Control". This blog will be regularly updated to keep you up to date about our progress. 
-Join the Journey ;)
+description: Along with the lecture Introduction to Software Engineering for Engineers, we will develop an app for Android OS on Money Control. This blog will be regularly updated to keep you up to date about our progress. 
+Join the Journey
 cover: assets/images/blog-cover.jpg
 logo: images/Logo.jpg
 logo_dark: assets/images/favicon.png
