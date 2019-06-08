@@ -11,7 +11,7 @@ baseurl: /isee2019-TeamMachine/
 # Website info
 title: TeamMachine
 description: TeamMachine:ISEE 2K19 SoSe Blog
-cover: assets/images/1.jpg
+cover: assets/images/cover.png
 logo: 
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
