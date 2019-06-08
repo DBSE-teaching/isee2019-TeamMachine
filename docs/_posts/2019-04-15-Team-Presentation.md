@@ -1,10 +1,13 @@
 ---
 layout: post
+current: post
+cover: 'assets/images/piano.jpg'
+navigation: true
 title: "Team Presentation"
-img: himalayan.jpg # Add image post (optional)
 date: 2019-04-15
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-tag: []
+class: post-template
+subclass: 'post tag-fiction'
+author: Muralidhar Reddy
 ---
 
 **Team Machine**
