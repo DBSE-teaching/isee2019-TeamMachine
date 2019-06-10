@@ -42,10 +42,22 @@ public class XpnseAdaptor extends RecyclerView.Adapter<XpnseAdaptor.XpnseViewHol
         if(!xpCursor.moveToPosition(i)){
             return;
         }
+
         xp_cat = xpCursor.getString(xpCursor.getColumnIndex(CeledgerContract.XpenseEntry.CATEGORY));
         xp_amt = xpCursor.getFloat(xpCursor.getColumnIndex(CeledgerContract.XpenseEntry.AMOUNT));
         xp_pm = xpCursor.getString(xpCursor.getColumnIndex(CeledgerContract.XpenseEntry.PAYMENTMETHOD));
         xp_dte = xpCursor.getString(xpCursor.getColumnIndex(CeledgerContract.XpenseEntry.DATE));
+
+        if(xp_cat.equals("Food")) {
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.food); }
+        else if(xp_cat.equals("Bills")){
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.bills); }
+        else if(xp_cat.equals("Shopping")){
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.shopping); }
+        else if(xp_cat.equals("Rent")){
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.rent); }
+        else if(xp_cat.equals("Travel")){
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.travel); }
 
         xpnseViewHolder.Xpnsetitle.setText(xp_cat);
         xpnseViewHolder.xp_amt.setText(String.valueOf(xp_amt));
