@@ -23,6 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 IncomeEntry.COL_5 + " FLOAT NOT NULL, " +
                 IncomeEntry.COL_2 + " DATE NOT NULL, " +
                 IncomeEntry.COL_3 + " TEXT NOT NULL, "+
+                IncomeEntry.COL_7 + " TEXT NOT NULL, " +
                 IncomeEntry.COL_6 + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP" +
                 ");");
         db.execSQL("create table " + XpenseEntry.XPENSE_TABLE + " (" +
@@ -31,6 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 XpenseEntry.AMOUNT + " FLOAT NOT NULL, " +
                 XpenseEntry.DATE + " DATE NOT NULL, " +
                 XpenseEntry.PAYMENTMETHOD + " TEXT NOT NULL, "+
+                XpenseEntry.DESCRIPTION + " TEXT NOT NULL, " +
                 XpenseEntry.TIMESTAMP + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP" +
                 ");");
     }
@@ -44,13 +46,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //INSERT INCOME DATA
-    public boolean insertincomedata(String source, String amount, String date, String paymentmethod){
+    public boolean insertincomedata(String source, String amount, String date, String paymentmethod, String description){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(IncomeEntry.COL_4, source);
         contentValues.put(IncomeEntry.COL_5, amount);
         contentValues.put(IncomeEntry.COL_2, date);
         contentValues.put(IncomeEntry.COL_3, paymentmethod);
+        contentValues.put(IncomeEntry.COL_7, description);
         long icresult = db.insert(IncomeEntry.INCOME_TABLE, null, contentValues);
         if(icresult == -1)
             return false;
@@ -59,13 +62,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //INSERT EXPENSE DATA
-    public boolean insertxpnsedata(String category, String amount, String date, String paymentmethod){
+    public boolean insertxpnsedata(String category, String amount, String date, String paymentmethod, String description){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(XpenseEntry.CATEGORY, category);
         cv.put(XpenseEntry.AMOUNT, amount);
         cv.put(XpenseEntry.DATE, date);
         cv.put(XpenseEntry.PAYMENTMETHOD, paymentmethod);
+        cv.put(XpenseEntry.DESCRIPTION, description);
         long xpresult = db.insert(XpenseEntry.XPENSE_TABLE, null, cv);
         if(xpresult == -1)
             return false;

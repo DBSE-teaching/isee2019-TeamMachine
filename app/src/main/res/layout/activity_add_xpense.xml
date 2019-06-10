@@ -76,7 +76,7 @@
             android:text="AMOUNT"
             android:textColor="#0E0D0D"
             android:textSize="16sp"
-            android:layout_weight="0.5"/>
+            android:layout_weight="0.6"/>
 
         //PLACE WHERE USER ADDS DATA
 
@@ -91,9 +91,8 @@
             android:layout_weight="0.5"
             android:hint="Add Amount"
             android:inputType="numberDecimal"
-            android:paddingLeft="60dp"
-            android:textSize="12sp" />
 
+            android:textSize="12sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -121,7 +120,7 @@
             android:textSize="16sp"
             android:textColor="#0E0D0D"
             android:paddingLeft="16sp"
-            android:layout_weight="0.5"/>
+            android:layout_weight="0.24"/>
 
         //PLACE WHERE USER ADDS DATA
 
@@ -152,7 +151,7 @@
             android:textSize="16sp"
             android:textColor="#0E0D0D"
             android:paddingLeft="16sp"
-            android:layout_weight="0.5"/>
+            android:layout_weight="1"/>
 
         //PLACE WHERE USER ADDS DATA
 
@@ -161,7 +160,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
-            android:layout_weight="1"
+            android:layout_weight="0.9"
             android:hint="Select Payment Option"
             android:textSize="12sp" />
     </LinearLayout>
@@ -183,7 +182,7 @@
             android:textSize="16sp"
             android:textColor="#0E0D0D"
             android:paddingLeft="16sp"
-            android:layout_weight="0.5"/>
+            android:layout_weight="0.58"/>
 
         //PLACE WHERE USER ADDS DATA
         <EditText
@@ -199,12 +198,31 @@
             android:textSize="12sp" />
     </LinearLayout>
 
+    //DESCRIPTION
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expdtelayout"
+        android:layout_marginTop="10dp"
+        android:id="@+id/xpdscrptn">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/expdesc"
+            android:padding="10dp"
+            android:hint="Description (Optional)"
+            android:gravity="top"
+            android:background="@drawable/border"/>
+    </LinearLayout>
+
     //BUTTON TO ADD DATA TO DATABASE
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/addexpensebtn"
-        android:layout_below="@+id/expdtelayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
         android:layout_marginTop="28dp"
         android:layout_centerHorizontal="true"
         android:text="ADD EXPENSE"

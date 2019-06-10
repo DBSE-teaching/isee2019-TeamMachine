@@ -26,7 +26,7 @@ public class AddIncome extends AppCompatActivity {
     //DECLARATIONS
     DatabaseHelper income_db;
     SQLiteDatabase incdb;
-    EditText addincamt, addincdte;
+    EditText addincamt, addincdte, incdesc;
     MaterialBetterSpinner addinccat, addincPM;
     Button addincomebtn;
     DatePickerDialog incdatePicker;
@@ -60,11 +60,11 @@ public class AddIncome extends AppCompatActivity {
 
         income_db = new DatabaseHelper(this);
         incdb = income_db.getWritableDatabase();
-
         addincamt = findViewById(R.id.incamt);
         addinccat = findViewById(R.id.incsrc);
         addincPM = findViewById(R.id.incpm);
         addincdte = findViewById(R.id.incdte);
+        incdesc = findViewById(R.id.incdesc);
         addincomebtn = findViewById(R.id.addincomebtn);
 
         //INCOME CATEGORY ADAPTOR
@@ -140,7 +140,7 @@ public class AddIncome extends AppCompatActivity {
         addincomebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isInserted = income_db.insertincomedata(addinccat.getText().toString(), addincamt.getText().toString(), addincdte.getText().toString(), addincPM.getText().toString());
+                boolean isInserted = income_db.insertincomedata(addinccat.getText().toString(), addincamt.getText().toString(), addincdte.getText().toString(), addincPM.getText().toString(), incdesc.getText().toString());
                 if(isInserted == true)
                     Toast.makeText(AddIncome.this, "Data Inserted", Toast.LENGTH_LONG).show();
                 else

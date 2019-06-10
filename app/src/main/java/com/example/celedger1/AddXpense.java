@@ -26,7 +26,7 @@ public class AddXpense extends AppCompatActivity {
     //DECLARATIONS
     DatabaseHelper xpense_db;
     SQLiteDatabase expdb;
-    EditText addexpamt, addexpdte;
+    EditText addexpamt, addexpdte, expdesc;
     MaterialBetterSpinner addexpcat, addexpPM;
     Button addexpensebtn;
     DatePickerDialog expdatePicker;
@@ -47,6 +47,7 @@ public class AddXpense extends AppCompatActivity {
         addexpcat = findViewById(R.id.expsrc);
         addexpPM = findViewById(R.id.exppm);
         addexpdte = findViewById(R.id.expdte);
+        expdesc = findViewById(R.id.expdesc);
         addexpensebtn = findViewById(R.id.addexpensebtn);
 
         //Income Add Image
@@ -67,7 +68,7 @@ public class AddXpense extends AppCompatActivity {
             }
         });
 
-        //INCOME CATEGORY ADAPTOR
+        //EXPENSE CATEGORY ADAPTOR
         ArrayAdapter<String> XpenseCategory = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, XpenseCat);
         addexpcat.setAdapter(XpenseCategory);
 
@@ -140,7 +141,7 @@ public class AddXpense extends AppCompatActivity {
         addexpensebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isInserted = xpense_db.insertxpnsedata(addexpcat.getText().toString(), addexpamt.getText().toString(), addexpdte.getText().toString(), addexpPM.getText().toString());
+                boolean isInserted = xpense_db.insertxpnsedata(addexpcat.getText().toString(), addexpamt.getText().toString(), addexpdte.getText().toString(), addexpPM.getText().toString(), expdesc.getText().toString());
                 if(isInserted == true)
                     Toast.makeText(AddXpense.this, "Data Inserted", Toast.LENGTH_LONG).show();
                 else

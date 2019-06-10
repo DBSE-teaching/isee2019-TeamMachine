@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/recycler_back"
     tools:context=".MainActivity">
 
     //TOOLBAR
@@ -39,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/maintoolbar"
         android:layout_marginTop="2dp"
-        android:background="#BCBEBE"
+        android:background="#FFA0A0A0"
         android:elevation="5dp"
         android:padding="8dp">
 
@@ -63,16 +64,16 @@
             android:textAlignment="textEnd"
             android:text="0.00  "
             android:textStyle="bold"
-            android:textColor="#07C414"
+            android:textColor="#28A533"
             android:textSize="10sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right"
             android:paddingRight="56dp"
-            android:text="  €"
+            android:text=" €"
             android:textStyle="bold"
-            android:textColor="#07C414"
+            android:textColor="#FF28A533"
             android:textSize="10sp" />
 
     </LinearLayout>
@@ -93,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/Incmelist"
         android:layout_marginTop="10dp"
-        android:background="#BCBEBE"
+        android:background="#FFA0A0A0"
         android:elevation="5dp"
         android:padding="8dp">
 
@@ -118,16 +119,16 @@
             android:text="0.00  "
             android:textAlignment="textEnd"
             android:textStyle="bold"
-            android:textColor="#FA0505"
+            android:textColor="#E41111"
             android:textSize="10sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right"
             android:paddingRight="56dp"
-            android:text="  €"
+            android:text=" €"
             android:textStyle="bold"
-            android:textColor="#FA0505"
+            android:textColor="#FFE41111"
             android:textSize="10sp" />
 
     </LinearLayout>
@@ -147,7 +148,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#BCBEBE"
+        android:background="#FFA0A0A0"
         android:elevation="5dp"
         android:padding="8dp">
 
@@ -178,7 +179,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:paddingRight="56dp"
-            android:text="  €"
+            android:text=" €"
             android:textStyle="bold"
             android:textColor="#2660F0"
             android:textSize="10sp" />
