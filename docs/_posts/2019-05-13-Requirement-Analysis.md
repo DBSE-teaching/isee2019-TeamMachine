@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 'assets/images/sky.jpg'
+cover: 'assets/images/RA.jpg'
 navigation: true
 title: "Requirement Analysis"
 date: 2019-05-13
