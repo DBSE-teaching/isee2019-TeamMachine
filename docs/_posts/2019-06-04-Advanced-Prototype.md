@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 'assets/images/fables.jpg'
+cover: 'assets/images/AP.jpeg'
 navigation: true
 title: "Advanced Prototype"
 date: 2019-06-04
