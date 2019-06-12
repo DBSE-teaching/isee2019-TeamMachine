@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 'assets/images/bus.jpg'
+cover: 'assets/images/SD.jpeg'
 navigation: true
 title: "System Design"
 date: 2019-05-13
