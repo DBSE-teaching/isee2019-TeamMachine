@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 'assets/images/piano.jpg'
+cover: 'assets/images/Team.jpg'
 navigation: true
 title: "Team Presentation"
 date: 2019-04-15
