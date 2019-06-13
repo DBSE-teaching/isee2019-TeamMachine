@@ -111,7 +111,7 @@
         android:layout_alignParentBottom="true"
         android:id="@+id/incAF"
         android:layout_weight="1"
-        android:text="APLLY FILTER"
+        android:text="APPLY FILTER"
         android:textColor="#FFFF"
         android:background="@color/colorAccent"/>
 

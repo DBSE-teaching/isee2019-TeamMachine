@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home_nav" android:title="Home" android:icon="@drawable/ic_home_black_24dp" />
+    <item android:id="@+id/income_nav" android:title="Income" android:icon="@drawable/ic_inc_icon_24dp"/>
+    <item android:id="@+id/expense_nav" android:title="Expenditure" android:icon="@drawable/ic_exp_icon_24dp"/>
+    <item android:id="@+id/addincome_nav" android:title="Add Income" android:icon="@drawable/ic_add_circle_black_24dp" />
+    <item android:id="@+id/addexpense_nav" android:title="Add Expense" android:icon="@drawable/ic_remove_circle_black_24dp"/>
+    <item android:id="@+id/settings_nav" android:title="Settings" android:icon="@drawable/ic_settings_black_24dp" />
+    <item android:id="@+id/about_nav" android:title="About Us" android:icon="@drawable/ic_info_black_24dp"/>
+</menu>

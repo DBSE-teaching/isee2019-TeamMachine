@@ -4,16 +4,21 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 //CLASS FOR MAIN ACTIVITY
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //DECLARATIONS
     String limit = "3";
@@ -22,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     SQLiteDatabase expdb;
     XpnseAdaptor xpAdaptor;
     IncmeAdaptor icAdaptor;
+    DrawerLayout navigation;
 
     //CREATE LAYOUT
     @Override
@@ -38,8 +44,21 @@ public class MainActivity extends AppCompatActivity {
         ImageView addXpense = findViewById(R.id.addxpnseimg);
         RecyclerView Incmelist = findViewById(R.id.Incmelist);
         RecyclerView Xpnselist = findViewById(R.id.Xpnselist);
+        NavigationView menu_navig = findViewById(R.id.menu_navig);
+        navigation = findViewById(R.id.navig);
+        ImageView menu = findViewById(R.id.menu);
+
         xpense_db = new DatabaseHelper(this);
         expdb = xpense_db.getWritableDatabase();
+
+        //Navigation Drawer
+        menu_navig.setNavigationItemSelectedListener(this);
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigation.openDrawer(GravityCompat.START);
+            }
+        });
 
         //Linear Layout Income
         linearLayoutIncme.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +117,15 @@ public class MainActivity extends AppCompatActivity {
         SavingAmount.setText(String.valueOf(sTotal));
     }
 
+    @Override
+    public void onBackPressed() {
+        if(navigation.isDrawerOpen(GravityCompat.START)){
+            navigation.closeDrawer(GravityCompat.START);
+        }
+        else
+        super.onBackPressed();
+    }
+
     private Cursor getAllXpense(){
         Cursor cursor = expdb.query(CeledgerContract.XpenseEntry.XPENSE_TABLE,
                 null,
@@ -125,5 +153,39 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void recreate() {
         super.recreate();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch(menuItem.getItemId()){
+            case R.id.expense_nav:
+                Intent startexpense = new Intent(getApplicationContext(),ExpendActivity.class);
+                startActivity(startexpense);
+                finish();
+                break;
+            case R.id.income_nav:
+                Intent startincome = new Intent(getApplicationContext(),IncomeActivity.class);
+                startActivity(startincome);
+                finish();
+                break;
+            case R.id.addexpense_nav:
+                Intent startaddexpense = new Intent(getApplicationContext(),AddXpense.class);
+                startActivity(startaddexpense);
+                finish();
+                break;
+            case R.id.addincome_nav:
+                Intent startaddincome = new Intent(getApplicationContext(),AddIncome.class);
+                startActivity(startaddincome);
+                finish();
+                break;
+            case R.id.settings_nav:
+                break;
+            case R.id.about_nav:
+                break;
+            case R.id.home_nav:
+                navigation.closeDrawer(GravityCompat.START);
+                break;
+        }
+        return true;
     }
 }
