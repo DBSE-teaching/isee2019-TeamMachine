@@ -126,30 +126,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onBackPressed();
     }
 
-    private Cursor getAllXpense(){
-        Cursor cursor = expdb.query(CeledgerContract.XpenseEntry.XPENSE_TABLE,
-                null,
-                null,
-                null,
-                null,
-                null,
-                CeledgerContract.XpenseEntry.TIMESTAMP +" DESC",
-                limit);
-        return cursor;
-    }
-
-    private Cursor getAllIncome(){
-        Cursor cursor = expdb.query(CeledgerContract.IncomeEntry.INCOME_TABLE,
-                null,
-                null,
-                null,
-                null,
-                null,
-                CeledgerContract.IncomeEntry.COL_6 +" DESC",
-                limit);
-        return cursor;
-    }
-
     @Override
     public void recreate() {
         super.recreate();
@@ -187,5 +163,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
         return true;
+    }
+
+    private Cursor getAllXpense(){
+        Cursor cursor = expdb.query(CeledgerContract.XpenseEntry.XPENSE_TABLE,
+                null,
+                null,
+                null,
+                null,
+                null,
+                CeledgerContract.XpenseEntry.TIMESTAMP +" DESC",
+                limit);
+        return cursor;
+    }
+
+    private Cursor getAllIncome(){
+        Cursor cursor = expdb.query(CeledgerContract.IncomeEntry.INCOME_TABLE,
+                null,
+                null,
+                null,
+                null,
+                null,
+                CeledgerContract.IncomeEntry.COL_6 +" DESC",
+                limit);
+        return cursor;
     }
 }

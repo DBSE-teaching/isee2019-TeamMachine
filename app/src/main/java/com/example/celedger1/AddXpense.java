@@ -6,9 +6,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,7 +26,7 @@ import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
 import java.util.Calendar;
 
-public class AddXpense extends AppCompatActivity {
+public class AddXpense extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //DECLARATIONS
     DatabaseHelper xpense_db;
@@ -30,6 +35,7 @@ public class AddXpense extends AppCompatActivity {
     MaterialBetterSpinner addexpcat, addexpPM;
     Button addexpensebtn;
     DatePickerDialog expdatePicker;
+    DrawerLayout navigation;
 
     String[] XpenseCat = {"Food", "Travel", "Fees", "Bills", "Shopping", "Rent", "Others"}, PayMethodxp = {"Cash", "Online Transfer", "Card"};
 
@@ -40,7 +46,9 @@ public class AddXpense extends AppCompatActivity {
 
         //DECLARATION AND DEFINITION
         Button addincme = findViewById(R.id.incmeimg);
-        ImageView Home = findViewById(R.id.goHome);
+        NavigationView menu_navig = findViewById(R.id.menu_navig);
+        navigation = findViewById(R.id.navig);
+        ImageView menu = findViewById(R.id.menu);
         xpense_db = new DatabaseHelper(this);
         expdb = xpense_db.getWritableDatabase();
         addexpamt = findViewById(R.id.expamt);
@@ -59,12 +67,13 @@ public class AddXpense extends AppCompatActivity {
                 finish();
             }
         });
-        Home.setOnClickListener(new View.OnClickListener() {
+
+        //Navigation Drawer
+        menu_navig.setNavigationItemSelectedListener(this);
+        menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(MainIntent);
-                finish();
+                navigation.openDrawer(GravityCompat.START);
             }
         });
 
@@ -109,9 +118,48 @@ public class AddXpense extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(MainIntent);
-        super.onBackPressed();
+        if(navigation.isDrawerOpen(GravityCompat.START)){
+            navigation.closeDrawer(GravityCompat.START);
+        }
+        else {
+            Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(MainIntent);
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch(menuItem.getItemId()){
+            case R.id.expense_nav:
+                Intent startexpense = new Intent(getApplicationContext(),ExpendActivity.class);
+                startActivity(startexpense);
+                finish();
+                break;
+            case R.id.income_nav:
+                Intent startincome = new Intent(getApplicationContext(),IncomeActivity.class);
+                startActivity(startincome);
+                finish();
+                break;
+            case R.id.home_nav:
+                Intent goHome = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(goHome);
+                finish();
+                break;
+            case R.id.addincome_nav:
+                Intent startaddincome = new Intent(getApplicationContext(),AddIncome.class);
+                startActivity(startaddincome);
+                finish();
+                break;
+            case R.id.settings_nav:
+                break;
+            case R.id.about_nav:
+                break;
+            case R.id.addexpense_nav:
+                navigation.closeDrawer(GravityCompat.START);
+                break;
+        }
+        return true;
     }
 
     private TextWatcher addxpensetextwatcher = new TextWatcher() {

@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/navig"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddXpense">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddIncome">
+    tools:context=".AddXpense">
     //CHANGE THE CONSTRAINT LAYOUT TO RELATIVE LAYOUT
 
     //TOOLBAR
@@ -15,12 +23,12 @@
         android:elevation="40dp">
 
         <ImageView
-            android:id="@+id/goHome"
+            android:id="@+id/menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_home_white_24dp"/>
+            android:src="@drawable/ic_menu_white_24dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -229,3 +237,17 @@
         android:enabled="false"/>
 
 </RelativeLayout>
+
+    //NAVIGATION BAR
+    <android.support.design.widget.NavigationView
+        app:headerLayout="@layout/nav_header"
+        android:id="@+id/menu_navig"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FFFF"
+        app:menu="@menu/navigation"
+        android:layout_gravity="start">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

@@ -4,10 +4,15 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +20,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 //CLASS FOR EXPEND ACTIVITY
-public class ExpendActivity extends AppCompatActivity {
+public class ExpendActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //DECLARATIONS
     DatabaseHelper xpense_db;
@@ -26,6 +31,7 @@ public class ExpendActivity extends AppCompatActivity {
     String rq1,rq2, rq3, rq4, rq5, rq6, rq, rqpoe, rqepm;
     ArrayList<String> POE, ePM;
     private static Integer state = 0;
+    DrawerLayout navigation;
     public static String TAG = ExpendActivity.class.getSimpleName();
 
     //CREATE LAYOUT
@@ -37,28 +43,19 @@ public class ExpendActivity extends AppCompatActivity {
         //DECLARATION & DEFINITION
         RecyclerView ExpenselistRCV = findViewById(R.id.ExpenselistRCV);
         TextView Totalxpense = findViewById(R.id.Totalxpense);
-        ImageView Home = findViewById(R.id.goHome);
         ImageView XpCat = findViewById(R.id.xpnsefilter);
+        NavigationView menu_navig = findViewById(R.id.menu_navig);
+        navigation = findViewById(R.id.navig);
+        ImageView menu = findViewById(R.id.menu);
         xpense_db = new DatabaseHelper(this);
         expdb = xpense_db.getWritableDatabase();
 
-        //GO HOME
-        Home.setOnClickListener(new View.OnClickListener() {
+        //Navigation Drawer
+        menu_navig.setNavigationItemSelectedListener(this);
+        menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(POE != null) {
-                    POE.clear();
-                }
-                if(ePM != null){
-                    ePM.clear();
-                }
-                Sopoe = 0;
-                Soepm = 0;
-                SortExpbyCat.Sizeof = 0;
-                SortExpbyCat.pmsize = 0;
-                Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(MainIntent);
-                finish();
+                navigation.openDrawer(GravityCompat.START);
             }
         });
 
@@ -191,16 +188,94 @@ public class ExpendActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
-        if(POE != null){
-            POE.clear();
+        if(navigation.isDrawerOpen(GravityCompat.START)){
+            navigation.closeDrawer(GravityCompat.START);
         }
-        Sopoe = 0;
-        SortExpbyCat.Sizeof = 0;
-        Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(MainIntent);
-        finish();
-        super.onBackPressed();
+        else {
+            if (POE != null) {
+                POE.clear();
+            }
+            Sopoe = 0;
+            SortExpbyCat.Sizeof = 0;
+            Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(MainIntent);
+            finish();
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch(menuItem.getItemId()){
+            case R.id.home_nav:
+                if(POE != null) {
+                    POE.clear();
+                }
+                if(ePM != null){
+                    ePM.clear();
+                }
+                Sopoe = 0;
+                Soepm = 0;
+                SortExpbyCat.Sizeof = 0;
+                SortExpbyCat.pmsize = 0;
+                Intent goHome = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(goHome);
+                finish();
+                break;
+            case R.id.income_nav:
+                if(POE != null) {
+                    POE.clear();
+                }
+                if(ePM != null){
+                    ePM.clear();
+                }
+                Sopoe = 0;
+                Soepm = 0;
+                SortExpbyCat.Sizeof = 0;
+                SortExpbyCat.pmsize = 0;
+                Intent startincome = new Intent(getApplicationContext(),IncomeActivity.class);
+                startActivity(startincome);
+                finish();
+                break;
+            case R.id.addexpense_nav:
+                if(POE != null) {
+                    POE.clear();
+                }
+                if(ePM != null){
+                    ePM.clear();
+                }
+                Sopoe = 0;
+                Soepm = 0;
+                SortExpbyCat.Sizeof = 0;
+                SortExpbyCat.pmsize = 0;
+                Intent startaddexpense = new Intent(getApplicationContext(),AddXpense.class);
+                startActivity(startaddexpense);
+                finish();
+                break;
+            case R.id.addincome_nav:
+                if(POE != null) {
+                    POE.clear();
+                }
+                if(ePM != null){
+                    ePM.clear();
+                }
+                Sopoe = 0;
+                Soepm = 0;
+                SortExpbyCat.Sizeof = 0;
+                SortExpbyCat.pmsize = 0;
+                Intent startaddincome = new Intent(getApplicationContext(),AddIncome.class);
+                startActivity(startaddincome);
+                finish();
+                break;
+            case R.id.settings_nav:
+                break;
+            case R.id.about_nav:
+                break;
+            case R.id.expense_nav:
+                navigation.closeDrawer(GravityCompat.START);
+                break;
+        }
+        return true;
     }
 
     private Cursor getAllXpense(){
@@ -218,4 +293,5 @@ public class ExpendActivity extends AppCompatActivity {
         Cursor cursor = expdb.rawQuery("SELECT * FROM " + CeledgerContract.XpenseEntry.XPENSE_TABLE + " WHERE " + rq + " ORDER BY " + CeledgerContract.XpenseEntry.TIMESTAMP + " DESC ", null);
         return cursor;
     }
+
 }

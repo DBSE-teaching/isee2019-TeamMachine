@@ -4,10 +4,15 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +20,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 //CLASS FOR INCOME ACTIVITY
-public class IncomeActivity extends AppCompatActivity {
+public class IncomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //DECLARATIONS
     DatabaseHelper income_db;
@@ -26,6 +31,7 @@ public class IncomeActivity extends AppCompatActivity {
     String rq1,rq2, rq3, rq4, rq5, rq6, rq, rqsoi, rqipm;
     ArrayList<String> SOI, iPM;
     private static Integer state = 0;
+    DrawerLayout navigation;
     public static String TAG = IncomeActivity.class.getSimpleName();
 
     //CREATE LAYOUT
@@ -37,28 +43,19 @@ public class IncomeActivity extends AppCompatActivity {
         //DECLARATION & DEFINITION
         RecyclerView IncmelistRCV = findViewById(R.id.IncmelistRCV);
         TextView Totalincome = findViewById(R.id.Totalincome);
-        ImageView Home = findViewById(R.id.goHome);
         ImageView IcCat = findViewById(R.id.incmefilter);
+        NavigationView menu_navig = findViewById(R.id.menu_navig);
+        navigation = findViewById(R.id.navig);
+        ImageView menu = findViewById(R.id.menu);
         income_db = new DatabaseHelper(this);
         incdb = income_db.getWritableDatabase();
 
-        //GO HOME
-        Home.setOnClickListener(new View.OnClickListener() {
+        //Navigation Drawer
+        menu_navig.setNavigationItemSelectedListener(this);
+        menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(SOI != null) {
-                    SOI.clear();
-                }
-                if(iPM != null){
-                    iPM.clear();
-                }
-                Sosoi = 0;
-                Soipm = 0;
-                SortIncbyCat.Sizeof = 0;
-                SortIncbyCat.pmsize = 0;
-                Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(MainIntent);
-                finish();
+                navigation.openDrawer(GravityCompat.START);
             }
         });
 
@@ -191,16 +188,94 @@ public class IncomeActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
-        if(SOI != null){
-            SOI.clear();
+        if(navigation.isDrawerOpen(GravityCompat.START)){
+            navigation.closeDrawer(GravityCompat.START);
         }
-        Sosoi = 0;
-        SortExpbyCat.Sizeof = 0;
-        Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(MainIntent);
-        finish();
-        super.onBackPressed();
+        else {
+            if (SOI != null) {
+                SOI.clear();
+            }
+            Sosoi = 0;
+            SortExpbyCat.Sizeof = 0;
+            Intent MainIntent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(MainIntent);
+            finish();
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch(menuItem.getItemId()){
+            case R.id.expense_nav:
+                if(SOI != null) {
+                    SOI.clear();
+                }
+                if(iPM != null){
+                    iPM.clear();
+                }
+                Sosoi = 0;
+                Soipm = 0;
+                SortIncbyCat.Sizeof = 0;
+                SortIncbyCat.pmsize = 0;
+                Intent startexpense = new Intent(getApplicationContext(),ExpendActivity.class);
+                startActivity(startexpense);
+                finish();
+                break;
+            case R.id.home_nav:
+                if(SOI != null) {
+                    SOI.clear();
+                }
+                if(iPM != null){
+                    iPM.clear();
+                }
+                Sosoi = 0;
+                Soipm = 0;
+                SortIncbyCat.Sizeof = 0;
+                SortIncbyCat.pmsize = 0;
+                Intent goHome = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(goHome);
+                finish();
+                break;
+            case R.id.addexpense_nav:
+                if(SOI != null) {
+                    SOI.clear();
+                }
+                if(iPM != null){
+                    iPM.clear();
+                }
+                Sosoi = 0;
+                Soipm = 0;
+                SortIncbyCat.Sizeof = 0;
+                SortIncbyCat.pmsize = 0;
+                Intent startaddexpense = new Intent(getApplicationContext(),AddXpense.class);
+                startActivity(startaddexpense);
+                finish();
+                break;
+            case R.id.addincome_nav:
+                if(SOI != null) {
+                    SOI.clear();
+                }
+                if(iPM != null){
+                    iPM.clear();
+                }
+                Sosoi = 0;
+                Soipm = 0;
+                SortIncbyCat.Sizeof = 0;
+                SortIncbyCat.pmsize = 0;
+                Intent startaddincome = new Intent(getApplicationContext(),AddIncome.class);
+                startActivity(startaddincome);
+                finish();
+                break;
+            case R.id.settings_nav:
+                break;
+            case R.id.about_nav:
+                break;
+            case R.id.income_nav:
+                navigation.closeDrawer(GravityCompat.START);
+                break;
+        }
+        return true;
     }
 
     private Cursor getAllIncome(){
