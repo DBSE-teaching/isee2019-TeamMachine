@@ -165,7 +165,7 @@ public class ExpenseChart extends AppCompatActivity implements NavigationView.On
         PieData data = new PieData(dataSet);
 
         exppie.setData(data);
-        exppie.animateY(1000);
+        exppie.animateY(500);
         exppie.invalidate();
     }
 
@@ -218,4 +218,3 @@ public class ExpenseChart extends AppCompatActivity implements NavigationView.On
         return true;
     }
 }
-

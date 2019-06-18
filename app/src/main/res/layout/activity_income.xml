@@ -40,6 +40,14 @@
             android:textColor="#FFFF"
             android:paddingLeft="20dp"
             android:layout_weight="0.99"/>
+        //CHART VIEW
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/incchart"
+            android:paddingRight="8dp"
+            android:src="@drawable/ic_pie_chart_white_24dp"/>
         //SORT SIGN
         <ImageView
             android:id="@+id/incmefilter"

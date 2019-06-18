@@ -44,6 +44,7 @@ public class IncomeActivity extends AppCompatActivity implements NavigationView.
         RecyclerView IncmelistRCV = findViewById(R.id.IncmelistRCV);
         TextView Totalincome = findViewById(R.id.Totalincome);
         ImageView IcCat = findViewById(R.id.incmefilter);
+        ImageView incChart = findViewById(R.id.incchart);
         NavigationView menu_navig = findViewById(R.id.menu_navig);
         navigation = findViewById(R.id.navig);
         ImageView menu = findViewById(R.id.menu);
@@ -56,6 +57,16 @@ public class IncomeActivity extends AppCompatActivity implements NavigationView.
             @Override
             public void onClick(View v) {
                 navigation.openDrawer(GravityCompat.START);
+            }
+        });
+
+        //CHART VIEW
+        incChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openchart = new Intent(getApplicationContext(), IncomeChart.class);
+                startActivity(openchart);
+                finish();
             }
         });
 
