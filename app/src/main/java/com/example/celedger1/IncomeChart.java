@@ -108,7 +108,7 @@ public class IncomeChart extends AppCompatActivity implements NavigationView.OnN
         //exppie.setCenterTextColor(Color.BLACK);
         incpie.setHoleRadius(25f);
         incpie.setTransparentCircleAlpha(0);
-        incpie.setCenterText("Total Expenditure: " + iTotal + " €");
+        incpie.setCenterText("Total Income: " + iTotal + " €");
         incpie.setCenterTextSize(10);
         //pieChart.setDrawEntryLabels(true);
         //pieChart.setEntryLabelTextSize(20);

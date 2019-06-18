@@ -51,7 +51,11 @@ public class IncmeAdaptor extends RecyclerView.Adapter<IncmeAdaptor.IncmeViewHol
         ic_dte = icCursor.getString(icCursor.getColumnIndex(CeledgerContract.IncomeEntry.COL_2));
 
         if(ic_cat.equals("Payment")){
-            incmeViewHolder.imgicon.setImageResource(R.drawable.payment); }
+            incmeViewHolder.imgicon.setImageResource(R.drawable.payment_3); }
+        else if(ic_cat.equals("Salary")){
+            incmeViewHolder.imgicon.setImageResource(R.drawable.coins_3); }
+        else {
+            incmeViewHolder.imgicon.setImageResource(R.drawable.wallet_3); }
 
         incmeViewHolder.Incmetitle.setText(ic_cat);
         incmeViewHolder.ic_amt.setText(String.valueOf(ic_amt));

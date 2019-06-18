@@ -49,15 +49,19 @@ public class XpnseAdaptor extends RecyclerView.Adapter<XpnseAdaptor.XpnseViewHol
         xp_dte = xpCursor.getString(xpCursor.getColumnIndex(CeledgerContract.XpenseEntry.DATE));
 
         if(xp_cat.equals("Food")) {
-            xpnseViewHolder.imgicon.setImageResource(R.drawable.food); }
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.burger_3); }
+        else if(xp_cat.equals("Fees")) {
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.fee_3); }
         else if(xp_cat.equals("Bills")){
-            xpnseViewHolder.imgicon.setImageResource(R.drawable.bills); }
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.bill_3); }
         else if(xp_cat.equals("Shopping")){
-            xpnseViewHolder.imgicon.setImageResource(R.drawable.shopping); }
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.shopping_cart_3); }
         else if(xp_cat.equals("Rent")){
-            xpnseViewHolder.imgicon.setImageResource(R.drawable.rent); }
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.house_3); }
         else if(xp_cat.equals("Travel")){
-            xpnseViewHolder.imgicon.setImageResource(R.drawable.travel); }
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.airplane_3); }
+        else{
+            xpnseViewHolder.imgicon.setImageResource(R.drawable.wallet_3); }
 
         xpnseViewHolder.Xpnsetitle.setText(xp_cat);
         xpnseViewHolder.xp_amt.setText(String.valueOf(xp_amt));
