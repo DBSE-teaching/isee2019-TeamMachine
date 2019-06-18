@@ -7,8 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ExpendActivity">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/recycler_back"
@@ -23,6 +22,7 @@
         android:background="@color/design_default_color_primary"
         android:elevation="40dp">
 
+        //NAVIGATION
         <ImageView
             android:id="@+id/menu"
             android:layout_width="wrap_content"
@@ -40,6 +40,14 @@
             android:textColor="#FFFF"
             android:layout_weight="0.99"
             android:paddingLeft="20dp"/>
+        //CHART VIEW
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/expchart"
+            android:paddingRight="8dp"
+            android:src="@drawable/ic_pie_chart_white_24dp"/>
         //SORT SIGN
         <ImageView
             android:id="@+id/xpnsefilter"

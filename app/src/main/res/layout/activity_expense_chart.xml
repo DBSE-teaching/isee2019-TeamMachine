@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/navig"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExpenseChart">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpenseChart">
+
+    //TOOLBAR
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/expendtoolbar"
+        android:background="@color/design_default_color_primary"
+        android:elevation="40dp">
+
+        //NAVIGATION
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_menu_white_24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXPENSE"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFF"
+            android:layout_weight="0.99"
+            android:paddingLeft="20dp"/>
+        //LIST VIEW
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/explist"
+            android:layout_weight="0.1"
+            android:paddingRight="8dp"
+            android:src="@drawable/ic_view_list_white_24dp"/>
+    </LinearLayout>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:id="@+id/exppiechart">
+            </com.github.mikephil.charting.charts.PieChart>
+
+</RelativeLayout>
+
+    //NAVIGATION BAR
+    <android.support.design.widget.NavigationView
+        app:headerLayout="@layout/nav_header"
+        android:id="@+id/menu_navig"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FFFF"
+        app:menu="@menu/navigation"
+        android:layout_gravity="start">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

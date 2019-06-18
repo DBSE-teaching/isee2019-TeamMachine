@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SortIncbyCat"></activity>
+        <activity android:name=".ExpenseChart"></activity>
+        <activity android:name=".SortIncbyCat" />
         <activity android:name=".SortExpbyCat" />
         <activity android:name=".AddXpense" />
         <activity android:name=".AddIncome" />

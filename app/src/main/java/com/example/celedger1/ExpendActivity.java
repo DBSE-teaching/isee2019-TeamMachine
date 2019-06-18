@@ -44,6 +44,7 @@ public class ExpendActivity extends AppCompatActivity implements NavigationView.
         RecyclerView ExpenselistRCV = findViewById(R.id.ExpenselistRCV);
         TextView Totalxpense = findViewById(R.id.Totalxpense);
         ImageView XpCat = findViewById(R.id.xpnsefilter);
+        ImageView expChart = findViewById(R.id.expchart);
         NavigationView menu_navig = findViewById(R.id.menu_navig);
         navigation = findViewById(R.id.navig);
         ImageView menu = findViewById(R.id.menu);
@@ -56,6 +57,16 @@ public class ExpendActivity extends AppCompatActivity implements NavigationView.
             @Override
             public void onClick(View v) {
                 navigation.openDrawer(GravityCompat.START);
+            }
+        });
+
+        //CHART VIEW
+        expChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openchart = new Intent(getApplicationContext(), ExpenseChart.class);
+                startActivity(openchart);
+                finish();
             }
         });
 
