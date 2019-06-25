@@ -102,3 +102,54 @@ The statistics from time to time are represented graphically in the form of pie 
 
 * Status: Working as expected
 
+**4)Navigation Drawer:**
+
+This is to easily navigate between the screens of the application. The method onNavigationItemSelected() is used to switch between each and every class.
+
+![Navigation]({{site.baseurl}}/images/Navigation.jpeg "Navigation"){:height="40%" width="70%"}
+
+![Navigation]({{site.baseurl}}/images/Navigation.PNG "Navigation"){:height="40%" width="70%"}
+
+* Calledmethod: onNavigationItemSelected()
+
+* Path(line numbers): 132-163
+
+* Errors: Nil
+
+* Status: Working as expected
+
+**5)Enabling add button:**
+
+The add button in the income/expense entry page is enabled only when all the fields are entered. There are no optional fields.
+
+![Enabling]({{site.baseurl}}/images/Enabling.png "Enabling"){:height="40%" width="70%"}
+
+* Calledmethod: onTextChanged()
+
+* Path(line numbers): 172-179
+
+* Errors: Nil
+
+* Status: Working as expected
+
+## Black-Box Testing
+
+Testing the application without the knowledge of internal structure to check on what functionality is performing by the system under test. This is completely based on requirement specifications.
+
+![BB]({{site.baseurl}}/images/BB.jpg "BB"){:height="40%" width="70%"}
+
+We tested 5 functionalities using Black-Box Testing which are shown below:
+
+![Black-Box]({{site.baseurl}}/images/Black-Box.png "Black-Box"){:height="40%" width="70%"}
+
+## Source Code Analysis using IBM Application Security on Cloud:
+
+We also tested our source code using static techniques on IBM application security on cloud to find out if there are any issues.
+
+![IBM]({{site.baseurl}}/images/IBM.png "IBM"){:height="40%" width="70%"}
+
+## Summary of changes
+
+* No changes are made to the project objective.
+
+* But we have added navigation drawer to each and every screen as per the requirement of the customer.
