@@ -38,7 +38,7 @@ Testing the application with the knowledge of internal structure to check how th
 
 The code below is to show the recent three entries in the income/expenses in the homepage. The method getAllXpense() fetches the recent entries in the expense entry database using timestamp feed and gives limited entries in the homepage. Similarly the method getAllIncome() gives the recent entries for income in the homepage.
 
-![Homepage]({{site.baseurl}}/images/Homepage.png "Homepage"){:height="40%" width="70%"}
+![Homepage]({{site.baseurl}}/images/Homepage.png "Homepage"){:height="44%" width="77%"}
 
 **Scenario 1:**
 
@@ -92,7 +92,7 @@ The code below is to filter the entries to view the list with only required cate
 
 The statistics from time to time are represented graphically in the form of pie chart.
 
-![Piechart]({{site.baseurl}}/images/Piechart.png "Piechart"){:height="40%" width="70%"}
+![Piechart]({{site.baseurl}}/images/Piechart.png "Piechart"){:height="44%" width="77%"}
 
 * Calledmethod: setupcatPieChart()
 
@@ -122,7 +122,7 @@ This is to easily navigate between the screens of the application. The method on
 
 The add button in the income/expense entry page is enabled only when all the fields are entered. There are no optional fields.
 
-![Enabling]({{site.baseurl}}/images/Enabling.png "Enabling"){:height="40%" width="70%"}
+![Enabling]({{site.baseurl}}/images/Enabling.png "Enabling"){:height="48%" width="84%"}
 
 * Calledmethod: onTextChanged()
 
