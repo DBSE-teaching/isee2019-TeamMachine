@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 'assets/images/AP.jpeg'
+cover: 'assets/images/Testcase.jpeg'
 navigation: true
 title: "Test Case Design"
 date: 2019-06-25
