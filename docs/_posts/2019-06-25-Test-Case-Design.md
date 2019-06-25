@@ -66,7 +66,7 @@ The code below is to filter the entries to view the list with only required cate
 
 ![filtercat]({{site.baseurl}}/images/filtercat.jpeg "filtercat"){:height="40%" width="70%"}
 
-![Filter]({{site.baseurl}}/images/Filter.PNG "Filter"){:height="40%" width="70%"}
+![Filter]({{site.baseurl}}/images/Filter.PNG "Filter"){:height="20%" width="35%"}
 
 **Scenario 1:**
 
@@ -108,7 +108,7 @@ This is to easily navigate between the screens of the application. The method on
 
 ![Navigation]({{site.baseurl}}/images/Navigation.jpeg "Navigation"){:height="40%" width="70%"}
 
-![Navigation]({{site.baseurl}}/images/Navigation.PNG "Navigation"){:height="40%" width="70%"}
+![Navigation]({{site.baseurl}}/images/Navigation.PNG "Navigation"){:height="20%" width="35%"}
 
 * Calledmethod: onNavigationItemSelected()
 
@@ -146,7 +146,7 @@ We tested 5 functionalities using Black-Box Testing which are shown below:
 
 We also tested our source code using static techniques on IBM application security on cloud to find out if there are any issues.
 
-![IBM]({{site.baseurl}}/images/IBM.png "IBM"){:height="40%" width="70%"}
+![IBM]({{site.baseurl}}/images/IBM.png "IBM"){:height="60%" width="105%"}
 
 ## Summary of changes
 
