@@ -34,7 +34,7 @@ Testing the application with the knowledge of internal structure to check how th
 
 ![WB]({{site.baseurl}}/images/WB.jpg "WB"){:height="40%" width="70%"}
 
-**1)Limit Homepage entries to three:**
+**1) Limit Homepage entries to three:**
 
 The code below is to show the recent three entries in the income/expenses in the homepage. The method getAllXpense() fetches the recent entries in the expense entry database using timestamp feed and gives limited entries in the homepage. Similarly the method getAllIncome() gives the recent entries for income in the homepage.
 
@@ -60,7 +60,7 @@ The code below is to show the recent three entries in the income/expenses in the
 
 * Status: Working as expected
 
-**2)Filter by categories or by payment method:**
+**2) Filter by categories or by payment method:**
 
 The code below is to filter the entries to view the list with only required categories or the payment method.
 
@@ -88,7 +88,7 @@ The code below is to filter the entries to view the list with only required cate
 
 * Status: Working as expected
 
-**3)Creating Piechart:**
+**3) Creating Piechart:**
 
 The statistics from time to time are represented graphically in the form of pie chart.
 
@@ -102,7 +102,7 @@ The statistics from time to time are represented graphically in the form of pie 
 
 * Status: Working as expected
 
-**4)Navigation Drawer:**
+**4) Navigation Drawer:**
 
 This is to easily navigate between the screens of the application. The method onNavigationItemSelected() is used to switch between each and every class.
 
@@ -118,11 +118,11 @@ This is to easily navigate between the screens of the application. The method on
 
 * Status: Working as expected
 
-**5)Enabling add button:**
+**5) Enabling add button:**
 
 The add button in the income/expense entry page is enabled only when all the fields are entered. There are no optional fields.
 
-![Enabling]({{site.baseurl}}/images/Enabling.png "Enabling"){:height="48%" width="84%"}
+![Enabling1]({{site.baseurl}}/images/Enabling1.png "Enabling1"){:height="48%" width="84%"}
 
 * Calledmethod: onTextChanged()
 
