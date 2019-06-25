@@ -7,7 +7,7 @@ title: "Advanced Prototype"
 date: 2019-06-04
 class: post-template
 subclass: 'post tag-fiction'
-author: Muralidhar Reddy
+author: Pranay Teja Arikatla
 ---
 
 **Welcome Back**
