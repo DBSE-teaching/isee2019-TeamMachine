@@ -11,7 +11,7 @@
 
 ## This Week's Work
    
-   > Preparing presentation for the advanced prototype.
+   > Presentation for the advanced prototype is done.
    
    > Gathering content for next blog from team members.
    
