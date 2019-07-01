@@ -59,7 +59,7 @@ Working as a team was a great experience overall as it was first project for few
 
 ## About the course
 
-We can whole heartedly say that the course met our needs and expectations as everything was well structured and odered. It helps us in 
+We can whole heartedly say that the course met our needs and expectations as everything was well structured and odered. It helped us in 
 
 * Attaining programming skills.
 
