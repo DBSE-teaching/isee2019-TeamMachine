@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 'assets/images/SD.jpeg'
+cover: 'assets/images/React.jpg'
 navigation: true
 title: "Reflections"
 date: 2019-07-02
