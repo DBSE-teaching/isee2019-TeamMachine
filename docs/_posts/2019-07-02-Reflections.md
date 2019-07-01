@@ -18,7 +18,8 @@ Welcome to one of the final part of the blog as we have made it to th end of the
 
 We faced a few technical challenges with the implementation part of our app Celedger.
 
-![Technical Challenges]({{site.baseurl}}/images/challenge.jpeg "TC")
+![Technical Challenges]({{site.baseurl}}/images/challenge.jpg "TC")
+
 
 * Coding in Java : As members of our team were from diversified engineering backgrounds,none of our group members was familiar with java. So, the large portion of time was put in to understand everything from the scratch. But the support that every individual provided within helped to bridge the knowledge gap.
 
@@ -36,7 +37,7 @@ Working as a team was a great experience overall as it was first project for few
 
 * Assigning tasks : We were not sure of what tast everyone should do as the knowledge possessed was limited and different tasks in the app development were having different difficulty levels. As the work should be divided equally, it was bit challenging to maintain uniform workload.
 
-![Team Challenges]({{site.baseurl}}/images/tc.jpeg "TC")
+![Team Challenges]({{site.baseurl}}/images/tc.jpg "TC")
 
 * Too many ideas : Well,it's always beneficial if everyone contributes but whenever we had a problem, we always had more than two solutions within the team. Choosing the right idea was always difficult. 
 
@@ -50,7 +51,7 @@ Working as a team was a great experience overall as it was first project for few
 
 * Distribution and integration : Knowledge on how to distribute differents tasks to each member in the team with balanced workload and integrating differents parts together was also a key learning for us.
 
-![Team benefits]({{site.baseurl}}/images/tb.jpeg "TC")
+![Team benefits]({{site.baseurl}}/images/tb.jpg "TC")
 
 * Management : As agile project management method was used, we have learnt to work in a well-organized way.
 
