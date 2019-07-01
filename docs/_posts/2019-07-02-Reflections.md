@@ -30,3 +30,15 @@ We faced a few technical challenges with the implementation part of our app Cele
 
 ## Challenges experienced by working as a team
 
+Working as a team was a great experience overall as it was first project for few, but there were some challenges as well.
+
+* Assigning tasks : We were not sure of what tast everyone should do as the knowledge possessed was limited and different tasks in the app development were having different difficulty levels. As the work should be divided equally, it was bit challenging to maintain uniform workload.
+
+* Too many ideas : Well,it's always beneficial if everyone contributes but whenever we had a problem, we always had more than two solutions within the team. Choosing the right idea was always difficult. 
+
+* Misunderstanding the requirements :- Each member in the team made seperate notes from the requirement analysis. When we discussed it with in the group, we had different opionions which ultimately put us in some state of enigma. So, the next meeting with customer was entirely focussed on solving the confusion.
+
+* Group meetings :- Our group members are in different semesters, doing different subjects, part time jobs, projects and so on. Finding a common time slot for internal meetings were a bit difficult for us. 
+
+
+
