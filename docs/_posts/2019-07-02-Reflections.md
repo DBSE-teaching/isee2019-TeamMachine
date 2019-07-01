@@ -12,7 +12,7 @@ author: Muralidhar Reddy
 
 **Hello People!**
 
-Welcome to one of the final part of the blog as we have made it to th end of the course. Nothing goes perfect without any issue and in this blog we will give a glance of challenges we faced, benefits we encountered as team and our experience while developing the app. 
+Welcome to one of the final part of the blog as we have made it to the end of the course. Nothing goes perfect without any issue and in this blog we will give a glance of challenges we faced, benefits we encountered as team and our experience while developing the app. 
 
 ## Technical Challenges encountered
 
@@ -21,9 +21,9 @@ We faced a few technical challenges with the implementation part of our app Cele
 ![Technical Challenges]({{site.baseurl}}/images/challenge.jpg "TC"){:height="55%" width="70%"}
 
 
-* Coding in Java : As members of our team were from diversified engineering backgrounds,none of our group members was familiar with java. So, the large portion of time was put in to understand everything from the scratch. But the support that every individual provided within helped to bridge the knowledge gap.
+* Coding in Java : As members of our team were from diversified engineering backgrounds,none of our group members was familiar with java. So, the large portion of time was put in to understand everything from the scratch. But the support that every individual provided within, helped to bridge the knowledge gap.
 
-* Using Android studio : In the beginning it was a challenge to get familiar with android studio and understand each and every option. We had some issues while developing the initial pages of the app. Also, running an android emulator takes a lot of time general.
+* Using Android studio : In the beginning, it was a challenge to get familiar with android studio and understand each and every option. We had some issues while developing the initial pages of the app. Also, running an android emulator takes a lot of time general.
 
 * Coding conventions : We didn't have prior knowledge on conventions that should be used and the importance of them. It was completely new for us. Also, it was quite difficult to ensure that every member of our team is following the coding conventions correctly.
 
@@ -35,7 +35,7 @@ We faced a few technical challenges with the implementation part of our app Cele
 
 Working as a team was a great experience overall as it was first project for few, but there were some challenges as well.
 
-* Assigning tasks : We were not sure of what tast everyone should do as the knowledge possessed was limited and different tasks in the app development were having different difficulty levels. As the work should be divided equally, it was bit challenging to maintain uniform workload.
+* Assigning tasks : We were not sure of what task everyone should do as the knowledge possessed was limited and different tasks in the app development were having different difficulty levels. As the work should be divided equally, it was bit challenging to maintain uniform workload.
 
 ![Team Challenges]({{site.baseurl}}/images/tc.jpg "TC"){:height="55%" width="70%"}
 
@@ -63,13 +63,13 @@ The answer is a simple Yeah. We can whole heartedly say that the course met our 
 
 * Attaining programming skills.
 
-* Improvement is presentation skills.
+* Improvement in presentation skills.
 
 * Understanding Agile method and how project management works.
 
 * Gaining knowlede in adapting to customer needs.
 
-* Familiar with github which was really great.
+* Familiarity with github which was really great.
 
 
 To know more about our app and to download it, please visit our next blog which is coming up shortly!!
