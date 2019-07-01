@@ -10,7 +10,7 @@ subclass: 'post tag-fiction'
 author: Muralidhar Reddy
 ---
 
-Hello People!
+**Hello People!**
 
 Welcome to one of the final part of the blog as we have made it to th end of the course. Nothing goes perfect without any issue and in this blog we will give a glance of challenges we faced, benefits we encountered as team and our experience while developing the app. 
 
