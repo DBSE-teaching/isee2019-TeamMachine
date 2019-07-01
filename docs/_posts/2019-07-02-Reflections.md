@@ -57,9 +57,9 @@ Working as a team was a great experience overall as it was first project for few
 
 * Blog writing : A step by step explanation of everything was put in our blog, including the details regarding the App, user stories, about our team and so on.
 
-## About the course
+## Did the course meet our needs?
 
-We can whole heartedly say that the course met our needs and expectations as everything was well structured and odered. It helped us in 
+The answer is a simple Yeah. We can whole heartedly say that the course met our needs and expectations as everything was well structured and odered. It helped us in 
 
 * Attaining programming skills.
 
