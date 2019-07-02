@@ -12,7 +12,7 @@ author: Pranay Teja Arikatla
 
 ## Play Store Entry
 
-![applogo]({{site.baseurl}}/images/applogo.png "applogo"){:height="36%" width="63%"}
+![applogo]({{site.baseurl}}/images/applogo.png "applogo"){:height="32%" width="56%"}
 
 ## Summary
 
