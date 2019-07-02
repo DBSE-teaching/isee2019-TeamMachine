@@ -11,10 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 
 public class Settings extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
+    LinearLayout addxpnse, addincme;
     DrawerLayout navigation;
     Switch pass;
 
@@ -27,6 +29,8 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
         navigation = findViewById(R.id.navig);
         ImageView menu = findViewById(R.id.menu);
         pass = findViewById(R.id.pass);
+        addxpnse = findViewById(R.id.addxpnse);
+        addincme = findViewById(R.id.addinmce);
 
         //Navigation Drawer
         menu_navig.setNavigationItemSelectedListener(this);
@@ -34,6 +38,22 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View v) {
                 navigation.openDrawer(GravityCompat.START);
+            }
+        });
+
+        addxpnse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addcatx = new Intent(getApplicationContext(), AddexpenseCat.class);
+                startActivity(addcatx);
+            }
+        });
+
+        addincme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addcati = new Intent(getApplicationContext(), AddincomeCat.class);
+                startActivity(addcati);
             }
         });
 
