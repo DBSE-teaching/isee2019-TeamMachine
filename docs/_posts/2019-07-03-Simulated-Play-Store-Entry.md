@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 'assets/images/Testcase.jpeg'
+cover: 'assets/images/spse.jpg'
 navigation: true
 title: "Simulated Play Store Entry"
 date: 2019-07-03
@@ -45,6 +45,8 @@ Celedger helps you track your money management efficiently. Its simple design ma
 * Installations: 4+
 
 * Offered by: Team Machine
+
+* Content Rating: USK: All ages
 
 ## Download
 
