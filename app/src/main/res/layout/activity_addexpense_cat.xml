@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddexpenseCat">
+
+    //TOOLBAR
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/addxpensetoolbar"
+        android:background="@color/design_default_color_primary"
+        android:elevation="40dp">
+
+        <ImageView
+            android:id="@+id/goBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CELEDGER"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFF"
+            android:paddingLeft="20dp"
+            android:layout_weight="0.99"/>
+    </LinearLayout>
+
+    //AMOUNT
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/addxpensetoolbar"
+        android:id="@+id/expcat">
+
+    //SHOWS TEXT
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="CATEGORY"
+        android:textColor="#0E0D0D"
+        android:textSize="16sp"
+        android:layout_weight="0.6"/>
+
+    //PLACE WHERE USER ADDS DATA
+    <EditText
+        android:id="@+id/addexpcat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_weight="0.5"
+        android:hint="Add Category"
+        android:textSize="12sp" />
+    </LinearLayout>
+
+    //BUTTON TO ADD DATA TO DATABASE
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addexpensecatbtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_centerHorizontal="true"
+        android:text="ADD EXPENSE CATEGORY"
+        android:enabled="false"/>
+
+
+</RelativeLayout>
