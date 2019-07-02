@@ -27,7 +27,7 @@ public class ExpendActivity extends AppCompatActivity implements NavigationView.
     SQLiteDatabase expdb;
     XpnseAdaptor xpAdaptor;
     float xpTotal;
-    int Sopoe, Soepm;
+    int Sopoe, Soepm, xpdate;
     String rq1,rq2, rq3, rq4, rq5, rq6, rq, rqpoe, rqepm;
     ArrayList<String> POE, ePM;
     private static Integer state = 0;
@@ -75,15 +75,22 @@ public class ExpendActivity extends AppCompatActivity implements NavigationView.
         ePM = SortExpbyCat.ExpPM;
         Log.d(TAG, "POE: " + POE);
         Log.d(TAG, "Exp PayMethod: " + ePM);
+
         if(state!=0) {
             Sopoe = SortExpbyCat.Sizeof;
             Soepm = SortExpbyCat.pmsize;
+            xpdate = SortExpbyCat.xdate;
             Log.d(TAG, "Size of POE: " + Sopoe);
             Log.d(TAG, "Size of Exp PayMethod: " + Soepm);
         }
 
         //CREATE A QUERY TO FILTER DATABASE
         StringBuilder sb = new StringBuilder();
+        //Filter by Date
+        if(xpdate == 1)
+        {
+            rq = CeledgerContract.XpenseEntry.DATE + " BETWEEN '" + SortExpbyCat.fromdate + "' AND '" + SortExpbyCat.todate + "'";
+        }
         //Filter by Purpose of Expense
         if(Sopoe!=0 && Soepm == 0) {
             if (Sopoe > 1) {
@@ -155,8 +162,10 @@ public class ExpendActivity extends AppCompatActivity implements NavigationView.
 
         Log.d(TAG, "query: " + rq);
 
+
+
         //SHOWS SCROLLABLE EXPENSE LIST
-        if(Sopoe == 0 && Soepm == 0) {
+        if(Sopoe == 0 && Soepm == 0 && xpdate == 0) {
             ExpenselistRCV.setLayoutManager(new LinearLayoutManager(this));
             xpAdaptor = new XpnseAdaptor(this, getAllXpense());
             ExpenselistRCV.setAdapter(xpAdaptor);
@@ -179,7 +188,7 @@ public class ExpendActivity extends AppCompatActivity implements NavigationView.
         });
 
         //SHOW TOTAL EXPENSE
-        if(Sopoe == 0 && Soepm == 0) {
+        if(Sopoe == 0 && Soepm == 0 && xpdate == 0) {
             Cursor dcursor = expdb.rawQuery("SELECT SUM(" + CeledgerContract.XpenseEntry.AMOUNT + ") as Total FROM " + CeledgerContract.XpenseEntry.XPENSE_TABLE, null);
             if (dcursor.moveToFirst()) {
                 xpTotal = dcursor.getFloat(dcursor.getColumnIndex("Total"));// get final total
@@ -279,8 +288,9 @@ public class ExpendActivity extends AppCompatActivity implements NavigationView.
                 finish();
                 break;
             case R.id.settings_nav:
-                break;
-            case R.id.about_nav:
+                Intent startsettings = new Intent(getApplicationContext(),Settings.class);
+                startActivity(startsettings);
+                finish();
                 break;
             case R.id.expense_nav:
                 navigation.closeDrawer(GravityCompat.START);

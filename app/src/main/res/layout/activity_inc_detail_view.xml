@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/navig"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExpendActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailView">
+
+        //TOOLBAR
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/toolbar"
+            android:background="@color/design_default_color_primary"
+            android:elevation="40dp">
+
+            //NAVIGATION
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_menu_white_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CELEDGER"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#FFFF"
+                android:layout_weight="0.99"
+                android:paddingLeft="20dp"/>
+        </LinearLayout>
+
+        //AMOUNT
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/incamtlayout">
+
+            //SHOWS TEXT
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="AMOUNT: "
+                android:textColor="#0E0D0D"
+                android:textSize="16sp"
+                android:layout_weight="0.6"/>
+            <TextView
+                android:id="@+id/incamttv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="0.5"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="16dp"
+                android:text="€"
+                android:textColor="#0E0D0D"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        //EXPENSE CATEGORY
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/incamtlayout"
+            android:id="@+id/incsrclayout"
+            android:layout_marginTop="16sp">
+
+            //SHOWS TEXT
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="SOURCE OF INCOME: "
+                android:textSize="16sp"
+                android:textColor="#0E0D0D"
+                android:paddingLeft="16sp"
+                android:layout_weight="0.24"/>
+
+            <TextView
+                android:id="@+id/inccattv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="0.5"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        //PAYMENT METHOD
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/incsrclayout"
+            android:id="@+id/incPMlayout"
+            android:layout_marginTop="16sp">
+
+            //SHOWS TEXT
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Payment Method"
+                android:textSize="16sp"
+                android:textColor="#0E0D0D"
+                android:paddingLeft="16sp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/incpmtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="0.5"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        //DATE
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/incPMlayout"
+            android:id="@+id/incdtelayout"
+            android:layout_marginTop="16sp">
+
+            //SHOWS TEXT
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="DATE"
+                android:textSize="16sp"
+                android:textColor="#0E0D0D"
+                android:paddingLeft="16sp"
+                android:layout_weight="0.58"/>
+
+            <TextView
+                android:id="@+id/incdtetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="0.5"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        //DESCRIPTION
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/incdtelayout"
+            android:padding="10dp"
+            android:id="@+id/icdscrptn">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/incdesctv"
+                android:padding="10dp"
+                android:hint="Description"
+                android:gravity="top"
+                android:background="@drawable/border"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    //NAVIGATION BAR
+    <android.support.design.widget.NavigationView
+        app:headerLayout="@layout/nav_header"
+        android:id="@+id/menu_navig"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FFFF"
+        app:menu="@menu/navigation"
+        android:layout_gravity="start">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Show Savings
         sTotal = iTotal - xTotal;
+        sTotal = (float) (Math.round(sTotal*100.0)/100.0);
         SavingAmount.setText(String.valueOf(sTotal));
     }
 
@@ -155,8 +156,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 finish();
                 break;
             case R.id.settings_nav:
-                break;
-            case R.id.about_nav:
+                Intent startsettings = new Intent(getApplicationContext(),Settings.class);
+                startActivity(startsettings);
+                finish();
                 break;
             case R.id.home_nav:
                 navigation.closeDrawer(GravityCompat.START);

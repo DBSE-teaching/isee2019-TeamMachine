@@ -173,8 +173,9 @@ public class IncomeChart extends AppCompatActivity implements NavigationView.OnN
                 finish();
                 break;
             case R.id.settings_nav:
-                break;
-            case R.id.about_nav:
+                Intent startsettings = new Intent(getApplicationContext(),Settings.class);
+                startActivity(startsettings);
+                finish();
                 break;
             case R.id.expense_nav:
                 Intent startexpense = new Intent(getApplicationContext(),ExpendActivity.class);

@@ -12,7 +12,6 @@
     android:layout_height="wrap_content"
     android:background="@color/recycler_back"
     tools:context=".ExpendActivity">
-    //CHANGE THE CONSTRAINT LAYOUT TO LINEAR LAYOUT
 
     //TOOLBAR
     <LinearLayout

@@ -1,6 +1,7 @@
 package com.example.celedger1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class XpnseAdaptor extends RecyclerView.Adapter<XpnseAdaptor.XpnseViewHolder> {
@@ -17,6 +19,7 @@ public class XpnseAdaptor extends RecyclerView.Adapter<XpnseAdaptor.XpnseViewHol
     public Float xp_amt;
     public String xp_pm;
     public String xp_dte;
+    public static final String TAG = "XpnseAdaptor";
 
     private Context xpContext;
     private Cursor xpCursor;
@@ -47,6 +50,8 @@ public class XpnseAdaptor extends RecyclerView.Adapter<XpnseAdaptor.XpnseViewHol
         xp_amt = xpCursor.getFloat(xpCursor.getColumnIndex(CeledgerContract.XpenseEntry.AMOUNT));
         xp_pm = xpCursor.getString(xpCursor.getColumnIndex(CeledgerContract.XpenseEntry.PAYMENTMETHOD));
         xp_dte = xpCursor.getString(xpCursor.getColumnIndex(CeledgerContract.XpenseEntry.DATE));
+        final String desc = xpCursor.getString(xpCursor.getColumnIndex(CeledgerContract.XpenseEntry.DESCRIPTION));
+
 
         if(xp_cat.equals("Food")) {
             xpnseViewHolder.imgicon.setImageResource(R.drawable.burger_3); }
@@ -67,6 +72,19 @@ public class XpnseAdaptor extends RecyclerView.Adapter<XpnseAdaptor.XpnseViewHol
         xpnseViewHolder.xp_amt.setText(String.valueOf(xp_amt));
         xpnseViewHolder.xp_pm.setText(xp_pm);
         xpnseViewHolder.xp_dte.setText(xp_dte);
+
+        xpnseViewHolder.xpnsell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent xpdesc = new Intent(xpContext, DetailView.class);
+                xpdesc.putExtra("category",xp_cat);
+                xpdesc.putExtra("amount",String.valueOf(xp_amt));
+                xpdesc.putExtra("Paymethod",xp_pm);
+                xpdesc.putExtra("date",xp_dte);
+                xpdesc.putExtra("description",desc);
+                xpContext.startActivity(xpdesc);
+            }
+        });
     }
 
 
@@ -88,6 +106,7 @@ public class XpnseAdaptor extends RecyclerView.Adapter<XpnseAdaptor.XpnseViewHol
 
     //CREATE A VIEW
     public class XpnseViewHolder extends RecyclerView.ViewHolder{
+        LinearLayout xpnsell;
         ImageView imgicon;
         TextView Xpnsetitle;
         TextView xp_amt;
@@ -95,6 +114,7 @@ public class XpnseAdaptor extends RecyclerView.Adapter<XpnseAdaptor.XpnseViewHol
         TextView xp_dte;
         public XpnseViewHolder(@NonNull View itemView) {
             super(itemView);
+            xpnsell = itemView.findViewById(R.id.xpnsell);
             imgicon = itemView.findViewById(R.id.imgicon);
             Xpnsetitle = itemView.findViewById(R.id.Xpnsetitle);
             xp_amt = itemView.findViewById(R.id.xp_amt);

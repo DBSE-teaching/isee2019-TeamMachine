@@ -152,8 +152,9 @@ public class AddXpense extends AppCompatActivity implements NavigationView.OnNav
                 finish();
                 break;
             case R.id.settings_nav:
-                break;
-            case R.id.about_nav:
+                Intent startsettings = new Intent(getApplicationContext(),Settings.class);
+                startActivity(startsettings);
+                finish();
                 break;
             case R.id.addexpense_nav:
                 navigation.closeDrawer(GravityCompat.START);
@@ -189,8 +190,10 @@ public class AddXpense extends AppCompatActivity implements NavigationView.OnNav
         addexpensebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isInserted = xpense_db.insertxpnsedata(addexpcat.getText().toString(), addexpamt.getText().toString(), addexpdte.getText().toString(), addexpPM.getText().toString(), expdesc.getText().toString());
-                if(isInserted == true)
+                boolean isInserted = xpense_db.insertxpnsedata(addexpcat.getText().toString(),
+                        addexpamt.getText().toString(), addexpdte.getText().toString(),
+                        addexpPM.getText().toString(), expdesc.getText().toString());
+                if(isInserted)
                     Toast.makeText(AddXpense.this, "Data Inserted", Toast.LENGTH_LONG).show();
                 else
                     Toast.makeText(AddXpense.this, "Data Not Inserted", Toast.LENGTH_LONG).show();

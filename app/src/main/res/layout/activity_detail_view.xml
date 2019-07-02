@@ -5,23 +5,22 @@
     android:layout_height="match_parent"
     android:id="@+id/navig"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".AddIncome">
+    tools:context=".ExpendActivity">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddIncome">
-    //CHANGE THE CONSTRAINT LAYOUT TO RELATIVE LAYOUT
+    tools:context=".DetailView">
 
     //TOOLBAR
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/addincometoolbar"
+        android:id="@+id/toolbar"
         android:background="@color/design_default_color_primary"
         android:elevation="40dp">
 
+        //NAVIGATION
         <ImageView
             android:id="@+id/menu"
             android:layout_width="wrap_content"
@@ -37,34 +36,8 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:textColor="#FFFF"
-            android:paddingLeft="20dp"
-            android:layout_weight="0.99"/>
-    </LinearLayout>
-
-    //SELECT
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/addincometoolbar"
-        android:id="@+id/Select"
-        android:layout_marginTop="16dp"
-        android:gravity="center_horizontal">
-
-        <Button
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
-            android:elevation="8dp"
-            android:text="Income" />
-
-        <Button
-            android:id="@+id/xpnseimg"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="8dp"
-            android:text="Expense" />
+            android:layout_weight="0.99"
+            android:paddingLeft="20dp"/>
     </LinearLayout>
 
     //AMOUNT
@@ -72,8 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_below="@+id/Select"
-        android:id="@+id/incamtlayout">
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/expamtlayout">
 
         //SHOWS TEXT
         <TextView
@@ -81,26 +54,18 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:paddingLeft="16dp"
-            android:text="AMOUNT"
+            android:text="AMOUNT: "
             android:textColor="#0E0D0D"
             android:textSize="16sp"
             android:layout_weight="0.6"/>
-
-        //PLACE WHERE USER ADDS DATA
-
-        <EditText
-            android:id="@+id/incamt"
+        <TextView
+            android:id="@+id/expamttv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="12dp"
             android:layout_weight="0.5"
-            android:hint="Add Amount"
-            android:inputType="numberDecimal"
             android:textSize="12sp" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -108,15 +73,15 @@
             android:paddingRight="16dp"
             android:text="€"
             android:textColor="#0E0D0D"
-            android:textSize="16sp" />
+            android:textSize="16sp"/>
     </LinearLayout>
 
-    //INCOME CATEGORY
+    //EXPENSE CATEGORY
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/incamtlayout"
-        android:id="@+id/incsrclayout"
+        android:layout_below="@+id/expamtlayout"
+        android:id="@+id/expsrclayout"
         android:layout_marginTop="16sp">
 
         //SHOWS TEXT
@@ -124,21 +89,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="SOURCE OF INCOME"
+            android:text="PURPOSE OF EXPENSE: "
             android:textSize="16sp"
             android:textColor="#0E0D0D"
             android:paddingLeft="16sp"
-            android:layout_weight="0.43"/>
+            android:layout_weight="0.24"/>
 
-        //PLACE WHERE USER ADDS DATA
-
-        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-            android:id="@+id/incsrc"
+        <TextView
+            android:id="@+id/expcattv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="12dp"
-            android:layout_weight="1"
-            android:hint="Select Catagory"
+            android:layout_weight="0.5"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -146,8 +109,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/incsrclayout"
-        android:id="@+id/incPMlayout"
+        android:layout_below="@+id/expsrclayout"
+        android:id="@+id/expPMlayout"
         android:layout_marginTop="16sp">
 
         //SHOWS TEXT
@@ -155,21 +118,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="PAYMENT METHOD"
+            android:text="Payment Method"
             android:textSize="16sp"
             android:textColor="#0E0D0D"
             android:paddingLeft="16sp"
             android:layout_weight="1"/>
 
-        //PLACE WHERE USER ADDS DATA
-
-        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-            android:id="@+id/incpm"
+        <TextView
+            android:id="@+id/exppmtv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="12dp"
-            android:layout_weight="1"
-            android:hint="Select Payment Option"
+            android:layout_weight="0.5"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -177,8 +138,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/incPMlayout"
-        android:id="@+id/incdtelayout"
+        android:layout_below="@+id/expPMlayout"
+        android:id="@+id/expdtelayout"
         android:layout_marginTop="16sp">
 
         //SHOWS TEXT
@@ -190,19 +151,15 @@
             android:textSize="16sp"
             android:textColor="#0E0D0D"
             android:paddingLeft="16sp"
-            android:layout_weight="0.55"/>
+            android:layout_weight="0.58"/>
 
-        //PLACE WHERE USER ADDS DATA
-        <EditText
-            android:id="@+id/incdte"
+        <TextView
+            android:id="@+id/expdtetv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
             android:layout_weight="0.5"
-            android:hint="Select Date"
-            android:layout_gravity="center_vertical"
-            android:focusable="false"
-            android:textIsSelectable="true"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -210,43 +167,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/incdtelayout"
+        android:layout_below="@+id/expdtelayout"
         android:padding="10dp"
-        android:id="@+id/icdscrptn">
+        android:id="@+id/xpdscrptn">
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:id="@+id/incdesc"
+            android:id="@+id/expdesctv"
             android:padding="10dp"
-            android:hint="Description (Optional)"
+            android:hint="Description"
             android:gravity="top"
             android:background="@drawable/border"/>
     </LinearLayout>
-
-    //BUTTON TO ADD DATA TO DATABASE
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/addincomebtn"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="28dp"
-        android:layout_centerHorizontal="true"
-        android:text="ADD INCOME"
-        android:enabled="false"/>
 
 </RelativeLayout>
 
     //NAVIGATION BAR
     <android.support.design.widget.NavigationView
-    app:headerLayout="@layout/nav_header"
-    android:id="@+id/menu_navig"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:background="#FFFF"
-    app:menu="@menu/navigation"
-    android:layout_gravity="start">
+        app:headerLayout="@layout/nav_header"
+        android:id="@+id/menu_navig"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FFFF"
+        app:menu="@menu/navigation"
+        android:layout_gravity="start">
 
     </android.support.design.widget.NavigationView>
 

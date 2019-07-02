@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IncomeChart"></activity>
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".IncDetailView" />
+        <activity android:name=".IncomeChart" />
         <activity android:name=".DetailView" />
         <activity android:name=".ExpenseChart" />
         <activity android:name=".SortIncbyCat" />

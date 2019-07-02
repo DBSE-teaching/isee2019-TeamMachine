@@ -32,10 +32,68 @@
             android:paddingLeft="20dp"/>
     </LinearLayout>
 
+    //FILTER BY DATE
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sortincometoolbar"
+        android:id="@+id/heading"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DATE"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:id="@+id/Categ"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="From"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:id="@+id/fromdte"
+                android:focusable="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:id="@+id/todte"
+                android:focusable="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    //FILTER BY SOURCE OF INCOME AND PAYMENT METHOD
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Categ"
         android:layout_marginTop="10dp">
 
         //SOURCE OF INCOME

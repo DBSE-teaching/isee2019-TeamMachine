@@ -23,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 IncomeEntry.COL_5 + " FLOAT NOT NULL, " +
                 IncomeEntry.COL_2 + " DATE NOT NULL, " +
                 IncomeEntry.COL_3 + " TEXT NOT NULL, "+
-                IncomeEntry.COL_7 + " TEXT NOT NULL, " +
+                IncomeEntry.COL_7 + " TEXT, " +
                 IncomeEntry.COL_6 + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP" +
                 ");");
         db.execSQL("create table " + XpenseEntry.XPENSE_TABLE + " (" +
@@ -32,7 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 XpenseEntry.AMOUNT + " FLOAT NOT NULL, " +
                 XpenseEntry.DATE + " DATE NOT NULL, " +
                 XpenseEntry.PAYMENTMETHOD + " TEXT NOT NULL, "+
-                XpenseEntry.DESCRIPTION + " TEXT NOT NULL, " +
+                XpenseEntry.DESCRIPTION + " TEXT, " +
                 XpenseEntry.TIMESTAMP + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP" +
                 ");");
     }

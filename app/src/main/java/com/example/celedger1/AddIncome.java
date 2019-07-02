@@ -48,7 +48,16 @@ public class AddIncome extends AppCompatActivity implements NavigationView.OnNav
         NavigationView menu_navig = findViewById(R.id.menu_navig);
         navigation = findViewById(R.id.navig);
         ImageView menu = findViewById(R.id.menu);
+        income_db = new DatabaseHelper(this);
+        incdb = income_db.getWritableDatabase();
+        addincamt = findViewById(R.id.incamt);
+        addinccat = findViewById(R.id.incsrc);
+        addincPM = findViewById(R.id.incpm);
+        addincdte = findViewById(R.id.incdte);
+        incdesc = findViewById(R.id.incdesc);
+        addincomebtn = findViewById(R.id.addincomebtn);
 
+        //Expense Add Image
         addxpnse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,15 +75,6 @@ public class AddIncome extends AppCompatActivity implements NavigationView.OnNav
                 navigation.openDrawer(GravityCompat.START);
             }
         });
-
-        income_db = new DatabaseHelper(this);
-        incdb = income_db.getWritableDatabase();
-        addincamt = findViewById(R.id.incamt);
-        addinccat = findViewById(R.id.incsrc);
-        addincPM = findViewById(R.id.incpm);
-        addincdte = findViewById(R.id.incdte);
-        incdesc = findViewById(R.id.incdesc);
-        addincomebtn = findViewById(R.id.addincomebtn);
 
         //INCOME CATEGORY ADAPTOR
         ArrayAdapter<String> IncomeCategory = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, IncomeCat);
@@ -191,8 +191,9 @@ public class AddIncome extends AppCompatActivity implements NavigationView.OnNav
                 finish();
                 break;
             case R.id.settings_nav:
-                break;
-            case R.id.about_nav:
+                Intent startsettings = new Intent(getApplicationContext(),Settings.class);
+                startActivity(startsettings);
+                finish();
                 break;
             case R.id.addincome_nav:
                 navigation.closeDrawer(GravityCompat.START);

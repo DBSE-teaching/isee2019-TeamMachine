@@ -27,7 +27,7 @@ public class IncomeActivity extends AppCompatActivity implements NavigationView.
     SQLiteDatabase incdb;
     IncmeAdaptor icAdaptor;
     float icTotal;
-    int Sosoi, Soipm;
+    int Sosoi, Soipm, icdate;
     String rq1,rq2, rq3, rq4, rq5, rq6, rq, rqsoi, rqipm;
     ArrayList<String> SOI, iPM;
     private static Integer state = 0;
@@ -75,15 +75,22 @@ public class IncomeActivity extends AppCompatActivity implements NavigationView.
         iPM = SortIncbyCat.IncPM;
         Log.d(TAG, "SOI: " + SOI);
         Log.d(TAG, "Inc PayMethod: " + iPM);
+
         if(state!=0) {
             Sosoi = SortIncbyCat.Sizeof;
             Soipm = SortIncbyCat.pmsize;
+            icdate = SortIncbyCat.idate;
             Log.d(TAG, "Size of SOI: " + Sosoi);
             Log.d(TAG, "Size of Inc PayMethod: " + Soipm);
         }
 
         //CREATE A QUERY TO FILTER DATABASE
         StringBuilder sb = new StringBuilder();
+        //Filter by Date
+        if(icdate == 1)
+        {
+            rq = CeledgerContract.IncomeEntry.COL_2 + " BETWEEN '" + SortIncbyCat.fromdate + "' AND '" + SortIncbyCat.todate + "'";
+        }
         //Filter by source of Income
         if(Sosoi !=0 && Soipm == 0) {
             if (Sosoi > 1) {
@@ -155,8 +162,10 @@ public class IncomeActivity extends AppCompatActivity implements NavigationView.
 
         Log.d(TAG, "query: " + rq);
 
+
+
         //SHOWS SCROLLABLE INCOME LIST
-        if(Sosoi == 0 && Soipm == 0) {
+        if(Sosoi == 0 && Soipm == 0 && icdate == 0) {
             IncmelistRCV.setLayoutManager(new LinearLayoutManager(this));
             icAdaptor = new IncmeAdaptor(this, getAllIncome());
             IncmelistRCV.setAdapter(icAdaptor);
@@ -179,7 +188,7 @@ public class IncomeActivity extends AppCompatActivity implements NavigationView.
         });
 
         //SHOW TOTAL INCOME
-        if(Sosoi == 0) {
+        if(Sosoi == 0 && Soipm == 0 && icdate == 0) {
             Cursor dcursor = incdb.rawQuery("SELECT SUM(" + CeledgerContract.IncomeEntry.COL_5 + ") as Total FROM " + CeledgerContract.IncomeEntry.INCOME_TABLE, null);
             if (dcursor.moveToFirst()) {
                 icTotal = dcursor.getFloat(dcursor.getColumnIndex("Total"));// get final total
@@ -279,8 +288,9 @@ public class IncomeActivity extends AppCompatActivity implements NavigationView.
                 finish();
                 break;
             case R.id.settings_nav:
-                break;
-            case R.id.about_nav:
+                Intent startsettings = new Intent(getApplicationContext(),Settings.class);
+                startActivity(startsettings);
+                finish();
                 break;
             case R.id.income_nav:
                 navigation.closeDrawer(GravityCompat.START);
