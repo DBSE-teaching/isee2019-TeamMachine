@@ -18,6 +18,10 @@ author: Pranay Teja Arikatla
 
 Celedger helps you track your money management efficiently. Its simple design makes it straightforward and very easy to use. You just need a few seconds daily to save the amount spent and its purpose. No matter where you are just a couple of taps will save your income/expenses.
 
+![Final1]({{site.baseurl}}/images/Final1.png "Final1"){:height="40%" width="70%"}
+
+![Final2]({{site.baseurl}}/images/Final2.png "Final2"){:height="40%" width="70%"}
+
 **Features**
 
 * Simple and User Friendly Interface.
