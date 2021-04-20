@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Wed Jul 03 00:40:31 CEST 2019
+1.base=D\:\\ISEE\\Projects\\CeLedger\\App1\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=D\:\\ISEE\\Projects\\CeLedger\\App1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+1.path=classes.dex
